@@ -1,0 +1,54 @@
+{
+  "name": "vite-static-template",
+  "version": "1.0.0",
+  "description": "Vite静的サイト開発テンプレート - FLOCSS + BEM + Handlebars",
+  "keywords": [
+    "vite",
+    "template",
+    "static-site",
+    "flocss",
+    "bem",
+    "handlebars",
+    "scss",
+    "japanese"
+  ],
+  "author": "yutaro",
+  "type": "module",
+  "main": "index.js",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "kiso.css": "^1.1.4"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn watch:scss\" \"vite --host\"",
+    "watch:scss": "node bin/watch-scss-globs.js",
+    "build": "yarn format && rimraf dist && vite build",
+    "preview": "vite preview",
+    "format": "yarn run _lint-fix && yarn run _prettier-fix",
+    "_lint": "eslint --ext .js --ignore-path .gitignore . && stylelint \"**/*.{scss,css}\"",
+    "_prettier": "prettier --check \"**/*.{html,scss,js}\" --ignore-path .prettierignore",
+    "_lint-fix": "eslint --fix --ext .js --ignore-path .gitignore . && stylelint --fix \"**/*.{scss,css}\"",
+    "_prettier-fix": "prettier --write \"**/*.{html,scss,js}\" --ignore-path .prettierignore"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "chokidar": "^3.6.0",
+    "concurrently": "^9.1.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "glob": "10.3.10",
+    "postcss": "^8.4.45",
+    "prettier": "3.2.4",
+    "rimraf": "^6.0.1",
+    "sass": "1.70.0",
+    "sharp": "^0.33.4",
+    "stylelint": "16.2.0",
+    "stylelint-config-recess-order": "4.4.0",
+    "stylelint-config-standard-scss": "13.0.0",
+    "vite": "5.0.13",
+    "vite-plugin-handlebars": "^2.0.0",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-sass-glob-import": "^5.0.0"
+  }
+}
