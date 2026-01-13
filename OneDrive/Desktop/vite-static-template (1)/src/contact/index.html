@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+  {{> head }}
+
+  <body>
+    {{> p-header}}
+    <main class="l-contact">
+      <section class="p-contact">
+        <div class="p-contact__inner l-inner">
+          <h2 class="p-contact__title c-section-title" data-title="contact">contact</h2>
+          <div class="p-contact__form">
+            <form action="" class="p-form" novalidate>
+              <div class="p-form__item">
+                <label for="name" class="p-form__label p-form__label--required">お名前</label>
+                <input type="text" id="name" name="name" class="p-form__input" placeholder="例：山田 太郎" required />
+              </div>
+              <div class="p-form__item">
+                <label for="email" class="p-form__label p-form__label--required">メールアドレス</label>
+                <input type="email" id="email" name="email" class="p-form__input" placeholder="例：example@example.com" required />
+              </div>
+              <div class="p-form__item">
+                <label for="tel" class="p-form__label">電話番号</label>
+                <input type="tel" id="tel" name="tel" class="p-form__input" placeholder="例：090-1234-5678" />
+              </div>
+              <div class="p-form__item">
+                <label for="company" class="p-form__label">会社名</label>
+                <input type="text" id="company" name="company" class="p-form__input" placeholder="例：株式会社 山田" />
+              </div>
+              <div class="p-form__item">
+                <label for="prefecture" class="p-form__label">都道府県</label>
+                <div class="p-form__select-wrap">
+                  <select id="prefecture" name="prefecture" class="p-form__select">
+                    <option value="">選択してください</option>
+                    <optgroup label="北海道・東北地方">
+                      <option value="hokkaido">北海道</option>
+                      <option value="aomori">青森県</option>
+                      <option value="iwate">岩手県</option>
+                      <option value="miyagi">宮城県</option>
+                      <option value="akita">秋田県</option>
+                      <option value="yamagata">山形県</option>
+                      <option value="fukushima">福島県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="関東地方">
+                      <option value="tokyo">東京都</option>
+                      <option value="kanagawa">神奈川県</option>
+                      <option value="chiba">千葉県</option>
+                      <option value="tochigi">栃木県</option>
+                      <option value="gunma">群馬県</option>
+                      <option value="saitama">埼玉県</option>
+                      <option value="ibaraki">茨城県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="北陸地方">
+                      <option value="niigata">新潟県</option>
+                      <option value="toyama">富山県</option>
+                      <option value="ishikawa">石川県</option>
+                      <option value="fukui">福井県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="中部地方">
+                      <option value="yamanashi">山梨県</option>
+                      <option value="nagano">長野県</option>
+                      <option value="gifu">岐阜県</option>
+                      <option value="shizuoka">静岡県</option>
+                      <option value="aichi">愛知県</option>
+                      <option value="mie">三重県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="近畿地方">
+                      <option value="shiga">滋賀県</option>
+                      <option value="kyoto">京都府</option>
+                      <option value="osaka">大阪府</option>
+                      <option value="hyogo">兵庫県</option>
+                      <option value="nara">奈良県</option>
+                      <option value="wakayama">和歌山県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="中国地方">
+                      <option value="tottori">鳥取県</option>
+                      <option value="shimane">島根県</option>
+                      <option value="okayama">岡山県</option>
+                      <option value="hiroshima">広島県</option>
+                      <option value="yamaguchi">山口県</option>
+                    </optgroup>
+                    <hr />
+                    <optgroup label="四国地方">
+                      <option value="tokushima">徳島県</option>
+                      <option value="kagawa">香川県</option>
+                      <option value="ehime">愛媛県</option>
+                      <option value="kochi">高知県</option>
+                    </optgroup>
+                    <optgroup label="九州・沖縄地方">
+                      <option value="fukuoka">福岡県</option>
+                      <option value="saga">佐賀県</option>
+                      <option value="nagasaki">長崎県</option>
+                      <option value="kumamoto">熊本県</option>
+                      <option value="oita">大分県</option>
+                      <option value="miyazaki">宮崎県</option>
+                      <option value="kagoshima">鹿児島県</option>
+                      <option value="okinawa">沖縄県</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+              <div class="p-form__item">
+                <label for="inquiry-type" class="p-form__label p-form__label--required">お問い合わせ種別</label>
+                <div class="p-form__radio-group">
+                  <label class="p-form__radio">
+                    <input type="radio" name="inquiry-type" value="service" required />
+                    <span class="p-form__radio-text">サービスについて</span>
+                  </label>
+                  <label class="p-form__radio">
+                    <input type="radio" name="inquiry-type" value="price" required />
+                    <span class="p-form__radio-text">料金について</span>
+                  </label>
+                  <label class="p-form__radio">
+                    <input type="radio" name="inquiry-type" value="support" required />
+                    <span class="p-form__radio-text">サポート</span>
+                  </label>
+                  <label class="p-form__radio">
+                    <input type="radio" name="inquiry-type" value="other" required />
+                    <span class="p-form__radio-text">その他</span>
+                  </label>
+                </div>
+              </div>
+              <div class="p-form__item">
+                <label for="message" class="p-form__label p-form__label--required">お問い合わせ内容</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="8"
+                  class="p-form__textarea"
+                  required
+                  placeholder="お問い合わせ内容をご記入ください"
+                ></textarea>
+              </div>
+              <div class="p-form__item">
+                <label class="p-form__checkbox">
+                  <input type="checkbox" name="privacy" value="agree" required />
+                  <span class="p-form__checkbox-text"> <a href="#" class="p-form__link">プライバシーポリシー</a>に同意する </span>
+                </label>
+              </div>
+              <div class="p-form__button-wrap">
+                <button type="submit" class="c-button" data-color="black">送信する</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> p-footer}}
+  </body>
+</html>
