@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  {{> head }}
+
+  <body>
+    {{> p-header}}
+    <main class="l-top">
+      {{> p-mv}}
+
+      <section class="p-sample l-top__sample">
+        <div class="p-sample__inner l-inner">
+          {{> c-section-title title="sample" position="center"}}
+          <div class="p-sample__link-wrap">
+            <a class="p-sample__link" href="/_components.html">パーツ一覧へ</a>
+            <p>↑のページで共通パーツを制作してください</p>
+          </div>
+          <div class="p-sample__link-wrap">
+            <a class="p-sample__link" href="/contact/">問い合わせへ</a>
+          </div>
+
+          <hr class="p-sample__divider" />
+
+          <p>背景画像の読み込み</p>
+          <div class="p-sample__bg"></div>
+
+          <hr class="p-sample__divider" />
+
+          <p>通常画像の読み込み(imgの下部をマスクでフェードかけてます)</p>
+          <div class="p-sample__image">
+            <img src="/assets/images/image_sample.webp" width="512" height="512" alt="猫の画像" />
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> p-footer}}
+  </body>
+</html>
