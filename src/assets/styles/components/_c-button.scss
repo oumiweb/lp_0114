@@ -1,47 +1,39 @@
 @use "../global" as *;
 
 .c-button {
-  position: relative;
   display: inline-block;
-  padding: calc(14 * var(--to-rem)) calc(60 * var(--to-rem));
-  font-size: calc(15 * var(--to-rem));
-  line-height: 1.2;
+  padding: calc(8 * var(--to-rem)) calc(24 * var(--to-rem));
+  font-size: calc(18 * var(--to-rem));
+  line-height: 1.6;
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: var(--gradient-button-primary);
   border: 1px solid currentcolor;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    right: calc(20 * var(--to-rem));
-    width: calc(8 * var(--to-rem));
-    height: calc(8 * var(--to-rem));
-    content: "";
-    border-top: 2px solid var(--color-black);
-    border-right: 2px solid var(--color-black);
-    transition:
-      rotate 0.3s,
-      translate 0.3s;
-    rotate: 45deg;
-    translate: 0 -50%;
-  }
+  border-radius: calc(8 * var(--to-rem));
 
   @media (any-hover: hover) {
-    &:hover::before {
-      translate: 5px -50%;
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
 
 .c-button[data-color="black"] {
+  position: relative;
+  padding: calc(16 * var(--to-rem)) calc(56 * var(--to-rem)) calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
+  font-size: calc(22 * var(--to-rem));
   color: var(--color-white);
   background-color: var(--color-black);
-  border-color: var(--color-black);
 
   &::before {
-    border-top: 2px solid currentcolor;
-    border-right: 2px solid currentcolor;
+    position: absolute;
+    top: 50%;
+    right: calc(29 * var(--to-rem));
+    content: "";
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 11px solid var(--color-white);
+    transform: translateY(-50%);
   }
 }

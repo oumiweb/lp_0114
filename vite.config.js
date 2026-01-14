@@ -8,7 +8,6 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import convertImages from "./bin/vite-plugin-convert-images.js";
 import sassGlobImports from "vite-plugin-sass-glob-import";
 
-
 // サイトのルートを決定
 const root = resolve(__dirname, "src");
 
@@ -21,31 +20,16 @@ const inputsForStatic = {
   ...Object.fromEntries(
     globSync("src/**/*.html")
       .filter(file => {
+        // globは常に/で区切られたパスを返すが、念のため正規化（Windows対応）
         const normalizedPath = file.replace(/\\/g, "/");
         const fileName = basename(normalizedPath);
-
-        // 除外するディレクトリ（components以下すべて）
-        const excludedDirs = [
-          "src/components/base/",
-          "src/components/common/",
-          "src/components/layout/",
-          "src/components/project/",
-        ];
-
-        // 除外条件をまとめて判定
-        const isExcludedDir = excludedDirs.some(dir => normalizedPath.includes(dir));
         const isPrivateFile = fileName.startsWith("_");
-
-        return !isExcludedDir && !isPrivateFile;
+        const isComponent = normalizedPath.includes("src/components/");
+        return !isPrivateFile && !isComponent;
       })
-      .map(file => {
-        const htmlPath = relative("src", file).replace(/\\/g, "/");
-        const key = htmlPath.slice(0, -extname(file).length); // 拡張子なしでkeyに
-        return [key, resolve(__dirname, file)];
-      }),
+      .map(file => [relative("src", file.slice(0, file.length - extname(file).length)), resolve(__dirname, file)]),
   ),
 };
-
 
 export default defineConfig(() => ({
   root,
@@ -123,12 +107,7 @@ export default defineConfig(() => ({
 
     // コンポーネントのディレクトリを読み込む
     handlebars({
-      partialDirectory: [
-        resolve(__dirname, "src/components/base"),
-        resolve(__dirname, "src/components/layout"),
-        resolve(__dirname, "src/components/project"),
-        resolve(__dirname, "src/components/common"), // ← head.htmlを使うなら
-      ],
+      partialDirectory: resolve(__dirname, "src/components"),
       helpers: {
         br: contents => {
           return contents ? contents.replace(/\r?\n/g, "<br>") : "";
