@@ -107,7 +107,7 @@ export default defineConfig(() => ({
 
     // コンポーネントのディレクトリを読み込む
     handlebars({
-      partialDirectory: resolve(__dirname, "src/components"),
+      partialDirectory: globSync("src/components/**/", { absolute: true }),
       helpers: {
         br: contents => {
           return contents ? contents.replace(/\r?\n/g, "<br>") : "";
