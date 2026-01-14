@@ -6,7 +6,7 @@
   box-shadow: 0 0 25px oklch(from var(--color-black) l c h / 10%);
 
   @include mq("md") {
-    --header-height: 80px;
+    --header-height: 92px;
   }
 }
 
@@ -14,16 +14,18 @@
   display: flex;
   justify-content: space-between;
   height: inherit;
-  padding-inline-start: calc(16 * var(--to-rem));
+  padding-inline: calc(48 * var(--to-rem));
 }
 
 .p-header__logo {
+  display: flex;
+  align-self: center;
   width: 100%;
-  max-width: calc(40 * var(--to-rem));
-  height: inherit;
+  max-width: calc(60 * var(--to-rem));
+  height: calc(66 * var(--to-rem));
 
   @include mq("md") {
-    max-width: calc(60 * var(--to-rem));
+    max-width: calc(112 * var(--to-rem));
   }
 }
 
