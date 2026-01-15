@@ -57,33 +57,3 @@
     font-size: clamp(calc(18 * var(--to-rem)), 3cqi, calc(24 * var(--to-rem)));
   }
 }
-
-.p-mv__splide {
-  width: 100%;
-  height: 100%;
-}
-
-.p-mv__splide .splide__track {
-  height: 100%;
-}
-
-.p-mv__splide .splide__list {
-  height: 100%;
-}
-
-.p-mv__splide .splide__slide {
-  height: 100%;
-}
-
-.p-mv__splide .splide__slide-image {
-  width: 100%;
-  height: 100%;
-}
-
-.p-mv__splide .splide__slide-image picture,
-.p-mv__splide .splide__slide-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
