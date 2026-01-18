@@ -136,3 +136,27 @@
   margin-top: calc(25 * var(--to-rem));
 }
 
+.c-accordion__image {
+  display: flex;
+ justify-content: center;
+ margin-top: calc(16 * var(--to-rem));
+}
+
+ .c-accordion__image img {
+ max-width: calc(463 * var(--to-rem));
+ }
+
+ .c-accordion__list {
+  list-style: decimal;
+ }
+
+ .c-accordion__list--disc {
+  list-style: disc;
+ }
+
+ .c-accordion__step-title {
+  margin-top: calc(16 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 2em;
+  color: var(--color-blue);
+ }
