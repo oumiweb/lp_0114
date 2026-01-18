@@ -1,9 +1,0 @@
-@use "../global" as *;
-
-.l-top__about {
-  margin-block-start: calc(40 * var(--to-rem));
-
-  @include mq(md) {
-    margin-block-start: calc(124 * var(--to-rem));
-  }
-}

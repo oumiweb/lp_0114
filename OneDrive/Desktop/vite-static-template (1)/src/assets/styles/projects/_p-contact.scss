@@ -1,9 +1,0 @@
-@use "../global" as *;
-
-.p-contact {
-  padding-block: calc(72 * var(--to-rem));
-}
-
-.p-contact__form {
-  margin-top: calc(64 * var(--to-rem));
-}
