@@ -9,3 +9,7 @@
     max-width: calc(var(--inner) + var(--padding-inner) * 2);
   }
 }
+
+.l-inner--faq {
+  max-width: calc(var(--inner-sp) + var(--padding-inner-faq) * 2);
+}

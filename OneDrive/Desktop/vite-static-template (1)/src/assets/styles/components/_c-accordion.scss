@@ -6,7 +6,7 @@
 .c-accordion {
   // 背景色やらテキストの色やらを変数で管理
   --_text-color: var(--color-text);
-  --_background-default: var(--color-white);
+  --_background-default: var(--color-button-secondary);
   --_background-interactive: var(--color-gray);
   --_background-opened: var(--color-accent);
   --_text-color-opened: var(--color-white);

@@ -9,3 +9,9 @@
     max-width: calc(var(--inner) + var(--padding-inner) * 2);
   }
 }
+
+.l-inner--faq {
+  @include mq("md") {
+    max-width: var(--inner-faq);
+  }
+}
