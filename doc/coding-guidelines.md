@@ -256,6 +256,7 @@
   background-color: transparent;
   border: 1px solid var(--color-primary);
 }
+
 ```
 
 ### レスポンシブ対応

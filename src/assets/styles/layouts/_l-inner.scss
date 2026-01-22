@@ -11,7 +11,13 @@
 }
 
 .l-inner--faq {
-  @include mq("md") {
-    max-width: var(--inner-faq);
-  }
+  max-width: calc(var(--inner-faq) + var(--padding-inner) * 2);
+}
+
+.l-inner--card {
+  max-width: calc(var(--inner-card) + var(--padding-inner) * 2);
+}
+
+.l-inner--service {
+  max-width: calc(var(--inner-service-card) + var(--padding-inner) * 2);
 }

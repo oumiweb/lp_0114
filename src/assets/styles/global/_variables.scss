@@ -14,9 +14,11 @@
 
 :root {
   /* inner */
-  --inner: min(1080px, 100%);
+  --inner: min(1140px, 100%);
   --inner-sp: min(500px, 100%);
-  --inner-faq: min(915px, 100%);
+  --inner-faq: min(875px, 100%);
+  --inner-card: min(1091px, 100%);
+  --inner-service-card: min(1124px, 100%);
   --padding-inner: 20px;
 
   /* z-index */
@@ -26,13 +28,14 @@
   --color-white: #fff;
   --color-text: #333;
   --color-black: #232323;
+  --color-red: #b74040;
   --color-gray: #f0f0f0;
   --color-light-blue: #F6F9FF;
   --clor-lignt-orange: #FCF7E5;
   --color-blue: #1D6CBB;
   --color-light-gray:#cecece;
   --color-border-gray: #aaaaaf;
-  --color-accent: #408f95;
+  --color-green: #1D774B;
   --color-primary: #234f5e;
   --color-secondary: #00f;
   --color-orange: #de8430;
@@ -62,6 +65,6 @@
   --header-height: 64px;
 
   @media screen and (width >= 768px) {
-    --header-height: 80px;
+    --header-height: 92px;
   }
 }

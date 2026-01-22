@@ -37,3 +37,15 @@
     transform: translateY(-50%);
   }
 }
+
+.c-button--blue {
+  background: var(--color-button-secondary);
+  border-radius: 999px;
+  box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.02);
+}
+
+.c-button--close {
+  padding: calc(8 * var(--to-rem)) calc(56 * var(--to-rem));
+  cursor: pointer;
+  background: var(--color-text);
+}

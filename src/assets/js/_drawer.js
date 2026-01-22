@@ -135,4 +135,35 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // === モーダルの処理 ===
+  const openButtons = document.querySelectorAll('.js-modal-open');
+  const closeButtons = document.querySelectorAll('.js-modal-close');
+  const masks = document.querySelectorAll('.c-media__mask');
+
+  openButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetId = button.dataset.target;
+      const modal = document.getElementById(targetId);
+      const mask = document.querySelector('.c-media__mask');
+
+      modal?.classList.remove('hidden');
+      mask?.classList.remove('hidden');
+    });
+  });
+
+  function closeModal() {
+    const modals = document.querySelectorAll('.c-media');
+    const mask = document.querySelector('.c-media__mask');
+    modals.forEach(modal => modal.classList.add('hidden'));
+    mask?.classList.add('hidden');
+  }
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', closeModal);
+  });
+
+  masks.forEach(mask => {
+    mask.addEventListener('click', closeModal);
+  });
 });
