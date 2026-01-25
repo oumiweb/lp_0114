@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.c-tags {
+ display: flex;
+ gap: 27px;
+ align-items: center;
+}
+
+.c-tag {
+  padding-inline: calc(16 * var(--to-rem));
+ font-size:  calc(24 * var(--to-rem));
+ line-height: 1.6;
+ color: var(--color-secondary);
+ background: var(--color-light-blue);
+
+}
+

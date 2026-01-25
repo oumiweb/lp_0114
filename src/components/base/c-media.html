@@ -6,7 +6,7 @@
 
   <!-- 右：テキスト -->
   <div class="c-media__text">
-    <h2 class="c-media__title">{{title}}</h2>
+    <h2 class="c-media__title">{{{title}}}</h2>
 
     {{#if subTitle}}
       <p class="c-media__subtitle">{{{subTitle}}}</p>
@@ -15,7 +15,7 @@
 
     {{#if btnLabel}}
       <div class="c-media__button">
-        <a href="{{btnLink}}" class="c-button c-button--blue js-modal-open" data-target="solution-modal">{{btnLabel}}</a>
+        <button class="c-button c-button--blue js-modal-open" data-target="solution-modal">{{btnLabel}}</button>
       </div>
     {{/if}}
 

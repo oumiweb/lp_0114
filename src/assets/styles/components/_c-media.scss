@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.c-media__content:not(:first-of-type) {
+ margin-top: calc(64 * var(--to-rem));
+}
+
+/* Flexboxレイアウト */
+.c-media__content {
+  display: flex;
+  flex-direction: column;
+
+  @include mq("md"){
+ flex-direction: row;
+  gap: 40px;
+  }
+}
+
+/* 画像エリア */
+.c-media__image {
+ aspect-ratio: 1/1;
+
+img {
+  width: 181px;
+  object-fit: contain;
+ }
+}
+
+.c-media__subtitle {
+  margin-top: calc(8 * var(--to-rem));
+  font-size: calc(20 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  color: var(--color-blue);
+}
+
+.c-media__desc {
+  margin-top: calc(8 * var(--to-rem));
+  font-size: calc(13 * var(--to-rem));
+  font-weight: var(--fw-egular);
+  line-height: 1.6;
+}
+
+/* テキストエリア */
+.c-media__title:not(:first-of-type) {
+  margin-top: calc(24 * var(--to-rem));
+}
+
+.c-media__button {
+  margin-top: calc(8 * var(--to-rem));
+}

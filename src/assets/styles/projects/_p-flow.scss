@@ -1,0 +1,48 @@
+@use "../global" as *;
+
+.p-flow__box {
+ margin-top:calc(80 * var(--to-rem));
+}
+
+.p-flow__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(24 * var(--to-rem));
+  padding: calc(40 * var(--to-rem));
+  background: #F8F8F8;
+  border-radius: 16px;
+}
+
+.p-flow__item {
+ display: flex;
+ gap: calc(40 * var(--to-rem));
+
+}
+
+.p-flow__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(4 * var(--to-rem))calc(24 * var(--to-rem));
+ font-family: var(--title-font-family);
+ font-size:  calc(24 * var(--to-rem));
+ line-height: 1.6;
+ color: var(--color-white);
+ text-wrap: nowrap;
+ letter-spacing: 0.08em;
+ background: var(--color-button-secondary);
+ border-radius: 999px;
+}
+
+.p-flow__body {
+
+}
+
+.p-flow__heading {
+
+}
+
+.p-flow__text {
+
+}
+

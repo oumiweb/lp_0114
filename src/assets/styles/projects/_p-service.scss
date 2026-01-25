@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.p-service {
+padding-block: calc(120 * var(--to-rem));
+}
+
+.p-service-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(40 * var(--to-rem));
+  margin-top: calc(80 * var(--to-rem));
+ }
+
+ .p-service-card-list__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(40 * var(--to-rem));
+  justify-content: center;
+  width: 100%;
+  margin-top:  calc(48 * var(--to-rem));
+
+  @include mq(md) {
+    justify-content: flex-start;
+  }
+}
+
+.p-service-card-list__row--bottom {
+  justify-content: center;
+}

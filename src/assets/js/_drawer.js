@@ -139,13 +139,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // === モーダルの処理 ===
   const openButtons = document.querySelectorAll('.js-modal-open');
   const closeButtons = document.querySelectorAll('.js-modal-close');
-  const masks = document.querySelectorAll('.c-media__mask');
+  const masks = document.querySelectorAll('.c-modal__mask');
 
   openButtons.forEach(button => {
     button.addEventListener('click', () => {
       const targetId = button.dataset.target;
       const modal = document.getElementById(targetId);
-      const mask = document.querySelector('.c-media__mask');
+      const mask = document.querySelector('.c-modal__mask');
 
       modal?.classList.remove('hidden');
       mask?.classList.remove('hidden');
@@ -153,8 +153,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function closeModal() {
-    const modals = document.querySelectorAll('.c-media');
-    const mask = document.querySelector('.c-media__mask');
+    const modals = document.querySelectorAll('.c-modal');
+    const mask = document.querySelector('.c-modal__mask');
     modals.forEach(modal => modal.classList.add('hidden'));
     mask?.classList.add('hidden');
   }

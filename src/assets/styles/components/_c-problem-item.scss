@@ -1,0 +1,116 @@
+@use "../global" as *;
+
+.c-problem-item {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+  }
+}
+
+@include mq("md"){
+  .c-problem-item[data-reverse="true"] {
+    flex-direction: row-reverse;
+    gap: calc(64 * var(--to-rem)); // ← ここで距離調整
+  }
+}
+
+.c-problem-item[data-reverse="true"] {
+ .c-problem-item__body {
+    width: 100%;
+  }
+
+  @include mq("md") {
+    .c-problem-item__body {
+      width: calc(636 * var(--to-rem));
+    }
+  }
+}
+
+
+.c-problem-item__head {
+ display: flex;
+ gap: 48px;
+ margin-top: calc(82 * var(--to-rem));
+}
+
+.c-problem-item__wrap {
+  display: block;
+}
+
+.c-problem-item__number {
+  font-family: var(--title-font-family);
+  font-size: calc(76 * var(--to-rem));
+  font-weight: var( --fw-medium);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.c-problem-item__title {
+  font-size: calc(28 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  color: var(--color-blue);
+}
+
+// .c-problem-item__texts {
+
+// }
+
+.c-problem-item__sub-text {
+  margin-top: calc(40 * var(--to-rem));
+  font-size: calc(18 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+}
+
+.c-problem-item__text {
+  margin-top: 16px;
+ font-size: calc(18 * var(--to-rem));
+ line-height: 1.6;
+}
+
+.c-problem-item__dl {
+  margin-top: calc(40 * var(--to-rem));
+}
+
+.c-problem-item__dt {
+  display: inline-block;
+  font-size: calc(20 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  background-color: var(--color-bg-gray);
+  border-radius: 4px;
+}
+
+.c-problem-item__dt:not(:first-of-type) {
+  margin-top: calc(16 * var(--to-rem));
+}
+
+// .c-problem-item__dd {
+
+// }
+
+.c-problem-item__image {
+ width: 440px;
+}
+
+.c-problem-list {
+  margin-top: calc(16 * var(--to-rem));
+
+  li {
+    margin-left: 50px;
+    line-height: 2;
+    list-style: disc;
+  }
+}
+
+.c-problem-list-note {
+  display: block;
+  margin-top: 8px;
+  font-size: calc(13 * var(--to-rem));
+  line-height: 1.6;
+}

@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 /* モーダル本体 */
-.p-solution-modal {
+.c-modal {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -14,34 +14,16 @@
   transform: translate(-50%, -50%);
 }
 
-.c-media__mask {
+.c-modal__mask {
   position: fixed;
   inset: 0;
   z-index: 1;
   background: rgba(0, 0, 0, 0.4);
 }
 
+// modal中身
 
-/* Flexboxレイアウト */
-.c-media__content {
-  display: flex;
-  gap: calc(40 * var(--to-rem));
-  align-items: center;
-}
-
-/* 画像エリア */
-.c-media__image img {
-  width: 181px;
-  height: 181px;
-  object-fit: contain;
-}
-
-/* テキストエリア */
-.c-media__title:not(:first-of-type) {
-  margin-top: calc(24 * var(--to-rem));
-}
-
-.c-media__op-title {
+.c-modal__op-title {
   margin-top: calc(8 * var(--to-rem));
   font-size: calc(28 * var(--to-rem));
   font-weight: var(--fw-bold);
@@ -49,7 +31,7 @@
   color: var(--color-blue);
 }
 
-.c-media__text {
+.c-modal__text {
   font-size: calc(15 * var(--to-rem));
   font-weight: var(--fw-egular);
   line-height: 2;
@@ -60,14 +42,14 @@
  }
 }
 
-.c-media__note {
+.c-modal__note {
   margin-top: calc(12 * var(--to-rem));
   font-size: calc(13 * var(--to-rem));
   font-weight: var(--fw-regular);
   line-height: 1.6;
 }
 
-.c-media__item {
+.c-modal__item {
   margin-top: calc(12 * var(--to-rem));
   font-size: calc(15 * var(--to-rem));
   font-weight: var(--fw-regular);
@@ -75,27 +57,13 @@
 }
 
 
-.c-media__term {
+.c-modal__term {
   font-size: calc(15 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 2;
 }
 
-
-.c-media__subtitle {
-  font-size: calc(20 * var(--to-rem));
-  font-weight: var(--fw-bold);
-  line-height: 1.6;
-  color: var(--color-blue);
-}
-
-.c-media__desc {
-  font-size: calc(13 * var(--to-rem));
-  font-weight: var(--fw-egular);
-  line-height: 1.6;
-}
-
-.c-media__close {
+.c-modal__close {
   display: flex;
  align-items: center;
  justify-content: center;
@@ -106,8 +74,4 @@
 /* 初期状態では非表示 */
 .hidden {
   display: none;
-}
-
-.c-media__button {
-  margin-top: calc(16 * var(--to-rem));
 }

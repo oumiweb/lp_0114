@@ -21,3 +21,7 @@
 .l-inner--service {
   max-width: calc(var(--inner-service-card) + var(--padding-inner) * 2);
 }
+
+.l-inner--flow {
+  max-width: calc(var(--inner-flow) + var(--padding-inner) * 2);
+}

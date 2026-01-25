@@ -1,9 +1,0 @@
-@use "../global" as *;
-
-.p-service-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(40 * var(--to-rem));
-  margin-top: calc(80 * var(--to-rem));
- }
-

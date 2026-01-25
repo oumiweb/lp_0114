@@ -1,0 +1,5 @@
+@use "../global" as *;
+
+.p-plan {
+  padding-block: calc(120 * var(--to-rem));
+}

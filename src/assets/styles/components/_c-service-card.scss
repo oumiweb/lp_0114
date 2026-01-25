@@ -1,7 +1,6 @@
 @use "../global" as *;
 
 .c-service-card {
-  flex: 0 1 auto;
   width: clamp(calc(280 * var(--to-rem)), calc(348 * var(--to-rem)), 100%);
 }
 
@@ -41,21 +40,6 @@
  list-style: disc;
 }
 
-.p-service-card-list__row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(40 * var(--to-rem));
-  justify-content: center;
-  width: 100%;
-
-  @include mq(md) {
-    justify-content: flex-start;
-  }
-}
-
-.p-service-card-list__row--bottom {
-  justify-content: center;
-}
 
 .c-service-card__item {
     font-size: calc(15 * var(--to-rem));

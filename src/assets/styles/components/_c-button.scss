@@ -9,7 +9,6 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: var(--gradient-button-primary);
-  border: 1px solid currentcolor;
   border-radius: calc(8 * var(--to-rem));
 
   @media (any-hover: hover) {
@@ -19,12 +18,11 @@
   }
 }
 
-.c-button[data-color="black"] {
+.c-button[data-color="orange"] {
   position: relative;
   padding: calc(16 * var(--to-rem)) calc(56 * var(--to-rem)) calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
   font-size: calc(22 * var(--to-rem));
   color: var(--color-white);
-  background-color: var(--color-black);
 
   &::before {
     position: absolute;

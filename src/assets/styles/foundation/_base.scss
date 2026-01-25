@@ -63,3 +63,7 @@ body {
   font-weight: var(--fw-regular);
   color: var(--color-text);
 }
+
+li::marker {
+  font-size: 0.6em; // ← ここでドットのサイズを調整
+}

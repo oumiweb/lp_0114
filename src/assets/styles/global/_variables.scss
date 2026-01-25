@@ -19,6 +19,7 @@
   --inner-faq: min(875px, 100%);
   --inner-card: min(1091px, 100%);
   --inner-service-card: min(1124px, 100%);
+  --inner-flow: min(930px, 100%);
   --padding-inner: 20px;
 
   /* z-index */
@@ -27,17 +28,15 @@
   /* color */
   --color-white: #fff;
   --color-text: #333;
-  --color-black: #232323;
   --color-red: #b74040;
-  --color-gray: #f0f0f0;
+  --color-gray: #c4c4c4;
   --color-light-blue: #F6F9FF;
   --clor-lignt-orange: #FCF7E5;
   --color-blue: #1D6CBB;
-  --color-light-gray:#cecece;
-  --color-border-gray: #aaaaaf;
+  --color-bg-gray: #eee;
   --color-green: #1D774B;
   --color-primary: #234f5e;
-  --color-secondary: #00f;
+  --color-secondary: #37618a;
   --color-orange: #de8430;
   --gradient-button-primary: linear-gradient(90deg,#E57311 0%, #E6914A 100%);
   --color-button-secondary: #356EA8; // ブルー系ボタン
@@ -63,6 +62,9 @@
 
   /* header height */
   --header-height: 64px;
+
+  /* padding scale pc=1, mobile=0.6 sp=0.4 */
+  --space-scale: clamp(0.4, calc(100vw / 1440), 1);
 
   @media screen and (width >= 768px) {
     --header-height: 92px;

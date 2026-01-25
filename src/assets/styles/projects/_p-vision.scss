@@ -1,0 +1,110 @@
+@use "../global" as *;
+
+.p-vision {
+  padding-block: calc(120 * var(--to-rem));
+}
+
+.p-vision-title {
+  position: relative;
+  font-size: calc(24 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+  text-align: center;
+
+  span {
+    color: var(--color-blue);
+  }
+
+  @include mq(md) {
+    font-size: calc(32 * var(--to-rem));
+  }
+ }
+
+
+.p-vision-title::before {
+  display: block;
+  font-family: var(--title-font-family);
+  font-size: calc(20 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  line-height: 1.4;
+  color: var(--color-gray);
+  text-align: center;
+  letter-spacing: 0.04em;
+  content:"Vision";
+}
+
+// 白枠
+.p-vision__item {
+ padding:calc(32 * var(--to-rem))calc(40 * var(--to-rem));
+ margin-top: calc(80 * var(--to-rem));
+ font-weight: var(--fw-bold);
+  line-height: 1.6;
+ background: var(--color-white);
+}
+
+.p-vision__heading {
+  position: relative;
+  padding-left: calc(22 * var(--to-rem));
+  font-size: calc(28 * var(--to-rem));
+}
+
+.p-vision__bar {
+   position: absolute;
+    top: 0.4em;
+    left: 0;
+    display: inline-block;
+    width: 10px;
+    height: 32px;
+    background-color: var(--color-blue);
+    border-radius: 2px;
+
+}
+
+.p-vision__text {
+  font-size: calc(18 * var(--to-rem));
+  font-weight: var(--fw-regular);
+}
+
+.p-vision__text:not(:first-child) {
+  margin-top: calc(18 * var(--to-rem));
+}
+
+// 下記リスト群
+
+.p-vision__media {
+  margin-top:calc(80 * var(--to-rem));
+
+  .c-media__image img {
+    width: 219px;
+  }
+
+  .c-media__desc {
+    font-size: calc(15 * var(--to-rem));
+    line-height: 2;
+  }
+
+  .c-media__content {
+    margin-top:calc(73 * var(--to-rem));
+  }
+}
+
+.c-media__list {
+  font-size: calc(15 * var(--to-rem));
+  line-height: 2;
+
+  strong {
+    padding-inline: calc(9 * var(--to-rem));
+    background: var(--color-white);
+  }
+}
+
+.c-media__item {
+  margin-top: calc(8 * var(--to-rem));
+}
+
+.c-media__note {
+  margin-top: calc(8 * var(--to-rem));
+  font-size: calc(15 * var(--to-rem));
+  font-weight: 400;
+}
+

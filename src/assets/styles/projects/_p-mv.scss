@@ -1,11 +1,10 @@
 @use "../global" as *;
 
 .p-mv {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: max(100svh, calc(450 * var(--to-rem)));
+  height: max(100svh, calc(1000 * var(--to-rem)));
+  padding-block: calc(120 * var(--to-rem));
   padding-block-start: var(--header-height);
+
 
   @include mq(md) {
     height: max(calc(500 * var(--to-rem)), 100%);
@@ -52,6 +51,7 @@
 }
 
 .p-mv__text {
+  margin-top: calc(24 * var(--to-rem));
   font-size: calc(16 * var(--to-rem));
   font-weight: var( --fw-regular);
   line-height: 2;
