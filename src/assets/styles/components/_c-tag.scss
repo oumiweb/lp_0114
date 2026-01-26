@@ -7,11 +7,21 @@
 }
 
 .c-tag {
-  padding-inline: calc(16 * var(--to-rem));
+ padding-block: calc(4 * var(--to-rem));
+ padding-inline: calc(16 * var(--to-rem));
  font-size:  calc(24 * var(--to-rem));
+ font-weight: var(--fw-bold);
  line-height: 1.6;
  color: var(--color-secondary);
  background: var(--color-light-blue);
+ border-radius: 4px;
+
+ &--blue {
+  font-size:  calc(20 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  color: var(--color-white);
+  background: var(--color-blue);
+ }
 
 }
 

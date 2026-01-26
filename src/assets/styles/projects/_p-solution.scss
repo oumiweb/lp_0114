@@ -5,7 +5,11 @@
 }
 
 .p-solution__media {
-  margin-top: 80px;
+  margin-top: calc(44 * var(--to-rem));
+
+  @include mq("md"){
+  margin-top:calc(84 * var(--to-rem));
+  }
 }
 
 .p-solution-title {

@@ -1,10 +1,9 @@
 @use "../global" as *;
 
 .p-mv {
-  height: max(100svh, calc(1000 * var(--to-rem)));
-  padding-block: calc(120 * var(--to-rem));
-  padding-block-start: var(--header-height);
-
+  height: max(100svh, calc(1200 * var(--to-rem)));
+  padding-top: calc(var(--header-height) + 120px); // ヘッダー分 + 上余白
+  padding-bottom: 120px; // 下余白のみ
 
   @include mq(md) {
     height: max(calc(500 * var(--to-rem)), 100%);
@@ -30,9 +29,14 @@
   }
 }
 
-
+.p-mv__tags {
+  .c-tags {
+    gap: 16px;
+  }
+}
 
 .p-mv__main-title {
+  margin-top: 8px;
   font-size: calc(32 * var(--to-rem));
   line-height: 1.5;
 
@@ -42,6 +46,7 @@
 }
 
 .p-mv__sub-title {
+  margin-top: calc(24 * var(--to-rem));
   font-size: calc(18 * var(--to-rem));
   line-height: 1.6;
 

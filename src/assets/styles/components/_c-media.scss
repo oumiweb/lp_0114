@@ -8,6 +8,7 @@
 .c-media__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @include mq("md"){
  flex-direction: row;
@@ -18,11 +19,20 @@
 /* 画像エリア */
 .c-media__image {
  aspect-ratio: 1/1;
+ box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.019);
 
 img {
   width: 181px;
-  object-fit: contain;
+  object-fit: cover;
  }
+}
+
+
+
+.c-media__title {
+  font-size: calc(28 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
 }
 
 .c-media__subtitle {
@@ -35,9 +45,9 @@ img {
 
 .c-media__desc {
   margin-top: calc(8 * var(--to-rem));
-  font-size: calc(13 * var(--to-rem));
-  font-weight: var(--fw-egular);
-  line-height: 1.6;
+  font-size: calc(16 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  line-height: 2;
 }
 
 /* テキストエリア */

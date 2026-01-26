@@ -5,25 +5,47 @@ padding-block: calc(120 * var(--to-rem));
 }
 
 .p-service-card-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr; // モバイル
   gap: calc(40 * var(--to-rem));
   margin-top: calc(80 * var(--to-rem));
- }
 
- .p-service-card-list__row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: calc(40 * var(--to-rem));
-  justify-content: center;
-  width: 100%;
-  margin-top:  calc(48 * var(--to-rem));
-
+  // md以上（768px〜）
   @include mq(md) {
-    justify-content: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+
+    > :nth-child(4) {
+      grid-column: 2 / 3; // 真ん中の列に
+    }
+
+    > :nth-child(5) {
+      grid-column: 3 / 4; // 右の列に
+    }
   }
 }
 
-.p-service-card-list__row--bottom {
-  justify-content: center;
-}
+
+// .p-service-card-list {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: calc(40 * var(--to-rem));
+//   margin-top: calc(80 * var(--to-rem));
+//  }
+
+//  .p-service-card-list__row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: calc(40 * var(--to-rem));
+//   justify-content: center;
+//   width: 100%;
+//   margin-top:  calc(48 * var(--to-rem));
+
+//   @include mq(md) {
+//     justify-content: flex-start;
+//   }
+// }
+
+// .p-service-card-list__row--bottom {
+//   display: contents;
+//   justify-content: center;
+// }

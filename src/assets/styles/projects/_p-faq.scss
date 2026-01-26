@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.p-faq {
+ padding-block: calc(120 * var(--to-rem));
+}
+
+.p-faq__accordion {
+  margin-top:calc(80 * var(--to-rem));
+}

@@ -7,7 +7,6 @@
   line-height: 1.6;
   color: var(--color-white);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   background: var(--gradient-button-primary);
   border-radius: calc(8 * var(--to-rem));
 
@@ -37,6 +36,7 @@
 }
 
 .c-button--blue {
+  font-size: 15px;
   background: var(--color-button-secondary);
   border-radius: 999px;
   box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.02);
