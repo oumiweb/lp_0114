@@ -4,13 +4,16 @@
   display: flex;
   align-items: center;
  justify-content: center;
- padding-block: calc(48 * var(--to-rem));
- margin-block: calc(80 * var(--to-rem));
- background-image: linear-gradient(180deg, #3e6186 0%, #3f64aa 100%),
- url('/assets/images/cta-bg.png');
- background-blend-mode: multiply;
- background-size: cover;
+ padding-block: calc(32 * var(--to-rem));
+ background: linear-gradient( to bottom, #3E6186 0%, #3F64AA 100% ),
+url('/assets/images/cta-bg2.png') center / cover no-repeat;
  border-radius: 24px;
+
+
+
+ @include mq("md"){
+  padding-block: calc(48 * var(--to-rem));
+ }
 
 }
 
@@ -21,19 +24,26 @@
 }
 
 .c-banner__catch {
-  margin-top: calc(24 * var(--to-rem));
- font-size: calc(32 * var(--to-rem));
+  margin-top: calc(20 * var(--to-rem));
+ font-size: calc(24 * var(--to-rem));
  line-height: 1.6;
  color: var(--color-white);
+ text-align: center;
+
+ @include mq("md"){
+  margin-top: calc(24 * var(--to-rem));
+  font-size: calc(32 * var(--to-rem));
+ text-align: start;
+ }
 }
-
-// .c-banner__emphasis {
-
-// }
 
 .c-banner__button {
   display: flex;
   justify-content: center;
-  margin-top: calc(24 * var(--to-rem));
+  margin-top: calc(20 * var(--to-rem));
+
+  @include mq("md"){
+    margin-top: calc(24 * var(--to-rem));
+  }
  }
 

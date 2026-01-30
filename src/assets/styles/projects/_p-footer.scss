@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .p-footer {
-  padding-block: calc(24 * var(--to-rem));
+  padding-block: calc(64 * var(--to-rem)) calc(24 * var(--to-rem));
   background-color: var(--color-bg-black);
 
   @include mq(md) {
@@ -29,10 +29,16 @@
 
 .p-footer__address {
   margin-top: calc(16 * var(--to-rem));
-  font-size:  calc(15 * var(--to-rem));
+  font-size:  calc(14 * var(--to-rem));
   font-style: normal;
-  line-height: 2;
+  line-height: 1.8;
   color: var(--color-white);
+
+  @include mq("md"){
+    margin-top: calc(16 * var(--to-rem));
+    font-size:  calc(15 * var(--to-rem));
+    line-height: 2;
+  }
 }
 
 
@@ -47,6 +53,15 @@
     justify-content: center;
     margin-top:calc(80 * var(--to-rem));
   }
+}
+
+.p-footer__nav {
+  margin-top: 64px;
+
+  @include mq("md"){
+    margin-top: 0;
+  }
+
 }
 
 .p-footer__nav-item a {

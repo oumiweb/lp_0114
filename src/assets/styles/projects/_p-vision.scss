@@ -1,12 +1,31 @@
 @use "../global" as *;
 
 .p-vision {
+  padding-block: calc(64 * var(--to-rem));
+
+  @include mq("md"){
   padding-block: calc(120 * var(--to-rem));
+  }
 }
+
+// 白枠
+.p-vision__item {
+  padding:calc(32 * var(--to-rem))calc(24 * var(--to-rem));
+  margin-top: calc(24 * var(--to-rem));
+  font-weight: var(--fw-bold);
+   line-height: 1.6;
+  background: var(--color-white);
+  border-radius: 16px;
+
+  @include mq("md"){
+    padding:calc(32 * var(--to-rem))calc(40 * var(--to-rem));
+    margin-top: calc(80 * var(--to-rem));
+  }
+ }
 
 .p-vision-title {
   position: relative;
-  font-size: calc(24 * var(--to-rem));
+  font-size: calc(20 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
   text-align: center;
@@ -33,19 +52,16 @@
   content:"Vision";
 }
 
-// 白枠
-.p-vision__item {
- padding:calc(32 * var(--to-rem))calc(40 * var(--to-rem));
- margin-top: calc(80 * var(--to-rem));
- font-weight: var(--fw-bold);
-  line-height: 1.6;
- background: var(--color-white);
-}
+
 
 .p-vision__heading {
   position: relative;
   padding-left: calc(22 * var(--to-rem));
-  font-size: calc(28 * var(--to-rem));
+  font-size: calc(20 * var(--to-rem));
+
+  @include mq("md"){
+    font-size: calc(28 * var(--to-rem));
+  }
 }
 
 .p-vision__bar {
@@ -54,57 +70,153 @@
     left: 0;
     display: inline-block;
     width: 10px;
-    height: 32px;
+    height: 64px;
     background-color: var(--color-blue);
     border-radius: 2px;
 
+    @include mq("md"){
+      height: 32px;
+    }
+
 }
 
-.p-vision__text {
-  font-size: calc(18 * var(--to-rem));
+.p-vision__texts {
+  margin-top:calc(25 * var(--to-rem));
+  font-size: calc(15 * var(--to-rem));
   font-weight: var(--fw-regular);
+  line-height: 1.6;
+
+  @include mq("md"){
+    font-size: calc(18 * var(--to-rem));
+  }
 }
 
-.p-vision__text:not(:first-child) {
-  margin-top: calc(18 * var(--to-rem));
+.p-vision__text:not(:first-child){
+ margin-top: 30px;
 }
 
 // 下記リスト群
 
 .p-vision__media {
   margin-top:calc(80 * var(--to-rem));
+}
 
-  .c-media__image img {
-    width: 219px;
+  .p-vision__desc {
+    margin-top:calc(16 * var(--to-rem));
+    font-size: calc(14 * var(--to-rem));
+    line-height: 1.8;
+
+    @include mq("md"){
+      margin-top: 0;
+      font-size: calc(15 * var(--to-rem));
+      line-height: 2;
+    }
   }
 
-  .c-media__desc {
-    font-size: calc(15 * var(--to-rem));
-    line-height: 2;
-  }
+.p-vision__content {
+  display: grid;
+  grid-template-columns: 1fr;
 
-  .c-media__content {
-    margin-top:calc(73 * var(--to-rem));
+  @include mq("md"){
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 219px 1fr;
   }
 }
 
-.c-media__list {
+.p-vision__content:not(:first-child) {
+  margin-top: calc(64 * var(--to-rem));
+
+  @include mq("md"){
+    margin-top: calc(73 * var(--to-rem));
+  }
+}
+
+.p-vision__image {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: center;
+
+  img {
+    width: 219px;
+    height: 219px;
+  }
+
+  @include mq("md"){
+  grid-row: 1 / 3;
+  grid-column: 1;
+  text-align: start;
+  }
+}
+
+.p-vision__title-wrap {
+  grid-row: 1;
+  grid-column: 1;
+  text-align: center;
+
+  @include mq("md"){
+  grid-row: 1;
+  grid-column: 2;
+  margin-top: 11px;
+  margin-left: 40px;
+  text-align: start;
+  }
+}
+
+.p-vision__text-box {
+  grid-row: 3;
+  grid-column: 1;
+  align-items: flex-start;
+  text-align: start;
+
+
+  @include mq("md"){
+    grid-row: 2;
+    grid-column: 2;
+    margin-left: 40px;
+  }
+}
+
+
+.p-vision__title {
+  font-size: calc(20 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
+
+  @include mq("md"){
+    font-size: calc(28 * var(--to-rem));
+  }
+}
+
+.p-vision__content:nth-of-type(2) .p-vision__title-wrap {
+  margin-top: 26px;
+}
+
+.p-vision__content:nth-of-type(3) .p-vision__title-wrap {
+  margin-top: 3px;
+}
+
+
+.p-vision__items {
+  margin-top: 16px;
+}
+
+.p-vision__list {
   font-size: calc(15 * var(--to-rem));
   line-height: 2;
 
-  strong {
-    padding-inline: calc(9 * var(--to-rem));
-    background: var(--color-white);
+  span {
+    margin-right: 16px;
+    font-size: calc(15 * var(--to-rem));
+   font-weight: var(--fw-bold);
+   background: var(--color-white);
+
   }
 }
 
-.c-media__item {
-  margin-top: calc(8 * var(--to-rem));
-}
+.p-vision__list:not(:first-child) {
+  margin-top: 24px;
 
-.c-media__note {
-  margin-top: calc(8 * var(--to-rem));
-  font-size: calc(15 * var(--to-rem));
-  font-weight: 400;
+  @include mq("md"){
+    margin-top: 8px;
+  }
 }
-

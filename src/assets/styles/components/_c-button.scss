@@ -19,19 +19,30 @@
 
 .c-button[data-color="orange"] {
   position: relative;
-  padding: calc(16 * var(--to-rem)) calc(56 * var(--to-rem)) calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
-  font-size: calc(22 * var(--to-rem));
+  padding: calc(12 * var(--to-rem)) calc(40 * var(--to-rem)) calc(12 * var(--to-rem)) calc(16 * var(--to-rem));
+  font-size: calc(18 * var(--to-rem));
+  line-height: 1.6;
   color: var(--color-white);
+
+
+  @include mq("md"){
+    padding: calc(16 * var(--to-rem)) calc(56 * var(--to-rem)) calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
+    font-size: calc(22 * var(--to-rem));
+  }
 
   &::before {
     position: absolute;
     top: 50%;
-    right: calc(29 * var(--to-rem));
+    right: calc(16 * var(--to-rem));
     content: "";
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
     border-left: 11px solid var(--color-white);
     transform: translateY(-50%);
+
+    @include mq("md"){
+      right: calc(29 * var(--to-rem));
+    }
   }
 }
 

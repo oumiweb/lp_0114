@@ -3,7 +3,8 @@
 
 .c-problem-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  align-items: center;
 
   @include mq(md) {
  flex-direction: row;
@@ -13,11 +14,19 @@
 }
 
 .c-problem-item:not(:first-child) {
-  margin-top: 88px;
+  margin-top:calc(56 * var(--to-rem));
+
+  @include mq("md"){
+  margin-top:calc(88 * var(--to-rem));
+  }
 }
 
 .c-problem-item:last-child {
- margin-top: 104px;
+  margin-top:calc(56 * var(--to-rem));;
+
+ @include mq("md"){
+  margin-top:calc(104 * var(--to-rem));
+ }
 }
 
 @include mq("md"){
@@ -41,9 +50,17 @@
 
 
 .c-problem-item__head {
- display: flex;
- gap: 48px;
- align-items: flex-start;
+  display: flex;
+  flex-direction: column; // SPでは縦並びにする（デフォルト）
+  gap: 24px; // SPでは間隔を狭く（見た目に合わせて調整可能）
+  align-items: flex-start;
+  margin-top: -60px; // ★画像の高さに合わせて数字を上に移動（調整値
+
+  @include mq("md") {
+    flex-direction: row; // md以上で横並びに変更
+    gap: 48px; // md以上で広めの間隔にする
+    margin-top: 0;
+  }
 }
 
 .c-problem-item__wrap {
@@ -60,38 +77,59 @@
 }
 
 .c-problem-item__title {
-  font-size: calc(28 * var(--to-rem));
+  font-size: calc(20 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
   color: var(--color-blue);
+
+  @include mq("md"){
+    font-size: calc(28 * var(--to-rem));
+  }
 }
 
 .c-problem-item__sub-text {
-  margin-top: calc(40 * var(--to-rem));
+  margin-top: calc(32 * var(--to-rem));
   font-size: calc(18 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
+
+  @include mq("md"){
+    margin-top: calc(40 * var(--to-rem));
+  }
 }
 
 .c-problem-item__text {
-  margin-top: 16px;
- font-size: calc(18 * var(--to-rem));
+  margin-top: 8px;
+ font-size: calc(15 * var(--to-rem));
  line-height: 1.6;
+
+ @include mq("md"){
+  margin-top: 16px;
+  font-size:  calc(18 * var(--to-rem));
+ }
 }
 
 .c-problem-item__texts {
-  margin-top: calc(40 * var(--to-rem));
+  margin-top: calc(32 * var(--to-rem));
+
+  @include mq("md"){
+    margin-top: calc(40 * var(--to-rem));
+  }
 }
 
 
 .c-problem-item__dt {
   display: inline-block;
   padding: calc(4 * var(--to-rem))calc(8 * var(--to-rem));
-  font-size: calc(20 * var(--to-rem));
+  font-size: calc(17 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
   background-color: var(--color-bg-gray);
   border-radius: 4px;
+
+  @include mq("md"){
+    font-size: calc(20 * var(--to-rem));
+  }
 }
 
 .c-problem-item__dt:not(:first-of-type) {
@@ -99,13 +137,32 @@
 }
 
 .c-problem-item__dd {
-  font-size: calc(16 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
   font-weight: var(--fw-regular);
-  line-height: 2;
+  line-height: 1.7;
+
+  @include mq("md"){
+    font-size: calc(16 * var(--to-rem));
+    line-height: 2;
+  }
 }
 
 .c-problem-item__image {
- width: 440px;
+ width: 214px;
+
+ @include mq("md"){
+  width: 440px;
+ }
+}
+
+.c-problem__wrap {
+  background: var(--color-light-blue);
+  border-radius: 8px;
+
+ @include mq("md"){
+  background: none;
+  border-radius: none;
+ }
 }
 
 .c-problem-list {
@@ -115,17 +172,28 @@
 
 
   li {
+    margin-top:calc(8 * var(--to-rem));
     margin-left: 16px;
-    font-size:  calc(16 * var(--to-rem));
-    line-height: 2;
+    font-size:  calc(14 * var(--to-rem));
+    line-height: 1.7;
     list-style: disc;
+
+    @include mq("md"){
+      font-size:  calc(16 * var(--to-rem));
+      line-height: 2;
+    }
   }
 }
 
 .c-problem-list-note {
   display: block;
   padding-top: calc(8 * var(--to-rem));
+  padding-bottom: calc(16 * var(--to-rem));
   margin-left: 16px;
   font-size: calc(13 * var(--to-rem));
   line-height: 1.6;
+
+  @include mq("md"){
+    padding-bottom: 0;
+  }
 }

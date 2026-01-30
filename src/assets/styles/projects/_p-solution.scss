@@ -1,11 +1,15 @@
 @use "../global" as *;
 
 .p-solution {
- padding-block: calc(238 * var(--to-rem))calc(120 * var(--to-rem));
+ padding-block: calc(64 * var(--to-rem));
+
+ @include mq("md"){
+  padding-block: calc(238 * var(--to-rem))calc(120 * var(--to-rem));
+ }
 }
 
 .p-solution__media {
-  margin-top: calc(44 * var(--to-rem));
+  margin-top: calc(24 * var(--to-rem));
 
   @include mq("md"){
   margin-top:calc(84 * var(--to-rem));

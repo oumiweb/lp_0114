@@ -1,7 +1,11 @@
 @use "../global" as *;
 
 .c-service-card {
-  width: clamp(calc(280 * var(--to-rem)), calc(348 * var(--to-rem)), 100%);
+ width: 100%;
+
+  @include mq("md"){
+    width: clamp(calc(280 * var(--to-rem)), calc(348 * var(--to-rem)), 100%);
+  }
 }
 
 .c-service-card__content {
@@ -46,4 +50,9 @@
     line-height: 2;
 }
 
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .c-service-card {
+    width: 100%; // ← カラム幅に合わせて広げる
+  }
+}
 

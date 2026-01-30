@@ -2,19 +2,24 @@
 
 .p-problem {
   position: relative;
-  padding-block: calc(48 * var(--to-rem));
+  padding-block: calc(64 * var(--to-rem));
 
   &::after {
     position: absolute;
-    bottom: -119px;
+    bottom: -31px;
     left: 0;
     z-index: 2;
     display: block;
     width: 100%;
-    height: 119px;
+    height: 31px;
     clip-path: polygon( 0 0, 100% 0, 50% 100%);
     content: "";
     background-color: var(--color-white);
+
+    @include mq("md"){
+      bottom: -119px;
+      height: 119px;
+    }
   }
 
   @include mq("md"){
@@ -24,5 +29,9 @@
 }
 
 .p-problem__list {
+  margin-top: calc(24 * var(--to-rem));
+
+  @include mq("md"){
   margin-top: calc(80 * var(--to-rem));
+  }
 }

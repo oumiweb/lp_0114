@@ -1,51 +1,66 @@
 @use "../global" as *;
 
 .p-service {
-padding-block: calc(120 * var(--to-rem));
+padding-block: calc(64 * var(--to-rem));
+
+@include mq("md"){
+  padding-block: calc(120 * var(--to-rem));
+}
 }
 
 .p-service-card-list {
   display: grid;
-  grid-template-columns: 1fr; // モバイル
+  grid-template-columns: 1fr; // 初期は1列（SP）
   gap: calc(40 * var(--to-rem));
-  margin-top: calc(80 * var(--to-rem));
+  justify-items: center;
+  margin-top: calc(24 * var(--to-rem));
 
-  // md以上（768px〜）
-  @include mq(md) {
+  // 中間幅（768〜959px）：2列構成、3番目のカードは2列分またがる
+  @media screen and (min-width: 768px) and (max-width: 959px) {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+
+    > :nth-child(3) {
+      grid-column: 1 / 3;
+      width: 100%;
+    }
+  }
+
+  // PC（960px〜）：3列構成
+  @media screen and (min-width: 960px) {
     grid-template-columns: repeat(3, 1fr);
 
-    > :nth-child(4) {
-      grid-column: 2 / 3; // 真ん中の列に
-    }
-
-    > :nth-child(5) {
-      grid-column: 3 / 4; // 右の列に
+    > :nth-child(3) {
+      grid-column: auto; // 通常の1列幅に戻す（任意）
+      width: auto;
     }
   }
 }
 
 
-// .p-service-card-list {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: calc(40 * var(--to-rem));
-//   margin-top: calc(80 * var(--to-rem));
-//  }
+.p-service-card-list__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-//  .p-service-card-list__row {
-//   display: flex;
-//   flex-wrap: wrap;
-//   gap: calc(40 * var(--to-rem));
-//   justify-content: center;
-//   width: 100%;
-//   margin-top:  calc(48 * var(--to-rem));
+  @include mq("md"){
+    flex-direction: row;
+   justify-content: center;
+  }
+}
 
-//   @include mq(md) {
-//     justify-content: flex-start;
+// @media screen and (max-width: 960px) {
+//   .p-service-card-list {
+//     grid-template-columns: repeat(2, 1fr); // PCも2列構成
+
+//   > :nth-child(5) {
+//     grid-column: 1 / 3;          // 2列にまたがる
+//     justify-self: center;        // 中央寄せ
+//     width: min(100%, 380px);     // 最大幅制限で見た目を整える
 //   }
 // }
 
-// .p-service-card-list__row--bottom {
+// .p-service-card-list__bottom {
 //   display: contents;
-//   justify-content: center;
+// }
 // }

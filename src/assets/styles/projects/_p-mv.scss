@@ -1,12 +1,29 @@
 @use "../global" as *;
 
+.sp-br {
+  display: block;
+
+  @include mq("md"){
+  display: none;
+  }
+}
+
+.pc-br {
+  display: none;
+
+  @include mq("md"){
+  display: block;
+  }
+}
+
 .p-mv {
-  height: max(100svh, calc(1200 * var(--to-rem)));
-  padding-top: calc(var(--header-height) + 120px); // ヘッダー分 + 上余白
-  padding-bottom: 120px; // 下余白のみ
+  height: max(100svh, calc(845 * var(--to-rem)));
+  padding-top: calc(var(--header-height) + 41px); // ヘッダー分 + 上余白
 
   @include mq(md) {
     height: max(calc(500 * var(--to-rem)), 100%);
+    padding-top: calc(var(--header-height) + 120px);
+    padding-bottom: 120px;
   }
 }
 
@@ -31,23 +48,28 @@
 
 .p-mv__tags {
   .c-tags {
+    gap: 8px;
+    text-wrap: nowrap;
+
+    @include mq("md"){
     gap: 16px;
+    }
   }
 }
 
 .p-mv__main-title {
-  margin-top: 8px;
-  font-size: calc(32 * var(--to-rem));
+  margin-top: 4px;
+  font-size: calc(28 * var(--to-rem));
   line-height: 1.5;
 
   @include mq(md) {
-    font-size: clamp(calc(32 * var(--to-rem)), 5cqi, calc(40 * var(--to-rem)));
+    margin-top: 8px;
+    font-size: clamp(calc(28 * var(--to-rem)), 5cqi, calc(40 * var(--to-rem)));
   }
 }
 
 .p-mv__sub-title {
   margin-top: calc(24 * var(--to-rem));
-  font-size: calc(18 * var(--to-rem));
   line-height: 1.6;
 
   @include mq(md) {
@@ -59,11 +81,18 @@
   margin-top: calc(24 * var(--to-rem));
   font-size: calc(16 * var(--to-rem));
   font-weight: var( --fw-regular);
-  line-height: 2;
+  line-height: 1.6;
+
+  @include mq("md"){
+    font-size: calc(16 * var(--to-rem));
+    font-weight: var( --fw-regular);
+    line-height: 2;
+  }
 }
 
 .p-mv__image {
-  width: 100%;
+  margin: 0 auto;
+  width: 67%;
 
   @include mq(md) {
     flex-basis: 41.4%;
@@ -92,5 +121,11 @@
 }
 
 .p-mv__button {
- margin-top: calc(40 * var(--to-rem));
+ margin-top: calc(24 * var(--to-rem));
+ text-align: center;
+
+ @include mq("md"){
+  margin-top: calc(40 * var(--to-rem));
+  text-align: start;
+ }
 }

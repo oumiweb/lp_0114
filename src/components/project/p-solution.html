@@ -1,14 +1,14 @@
-<section class="p-solution c-bg">
+<section id="solution" class="p-solution c-bg">
   <div class="p-solution__inner l-inner">
     <h2 class="p-solution-title">
-       官民連携で創る
+       官民連携で創る<br class="sp-br">
         <span>「国産データインフラ」</span>が
         <br>あなたのデータを守ります
       </h2>
   <div class="p-solution__media">
         {{> c-media
           img="feature_img-01.png"
-          title="伝送量に応じた課金で、保管コスト削減を実現"
+          title='伝送量に応じた課金で、<br class="sp-br">保管コスト削減を実現'
           desc="サラストレージは、保存するデータの総量ではなく、データ伝送量によって残高が消費されます。"
           btnLabel="契約・課金の仕組みはこちら"
         }}
@@ -22,7 +22,7 @@
 
         {{> c-media
           img="feature_img-03.png"
-          title="マイナンバーカードで厳重にロック"
+          title='マイナンバーカードで<br class="sp-br">厳重にロック'
           subTitle="デジタル庁「認証アプリ」を採用"
           desc="誰でも簡単にアクセスできるのは危険です。しかし、複雑すぎるのも課題です。<br>
           マイナンバーカードを使った高度なセキュリティで、安全性と使いやすさを両立しました。"
@@ -30,68 +30,22 @@
 
         {{> c-media
           img="feature_img-04.png"
-          title="全国に分散保存だから、災害に強い"
-          subTitle="IPFS技術で「消えないデータ保存」を実現"
-          desc="サ従来のサーバーは1箇所にデータを保存しています。<br>
-          災害やシステム障害で、データが全て消失する可能性があります。<br>
+          title='全国に分散保存だから、<br class="sp-br">災害に強い'
+          subTitle='IPFS技術で<br class="sp-br">「消えないデータ保存」を実現'
+          desc='従来のサーバーは1箇所にデータを保存しています。<br>
+          災害やシステム障害で、データが全て消失する可能性があります。<br class="pc-br">
           本サービスは違います。<br>
-          データを全国の複数拠点に自動で分散保存いたします。1か所が被災しても、お客様のデータは守られます。"
+          データを全国の複数拠点に自動で分散保存いたします。1か所が被災しても、お客様のデータは守られます。'
         }}
 
         {{> c-media
           img="feature_img-05.png"
-          title="完全プライベート環境も構築可能"
+          title='完全プライベート環境も<br class="sp-br">構築可能'
           subTitle="ホワイトラベル対応（オプション）"
-          desc="より高度なセキュリティが必要な企業や自治体様向けに、<br>
-          完全独立したプライベート環境の構築も可能です。（別途ご相談）"
+          desc='より高度なセキュリティが必要な企業や自治体様向けに、<br class="pc-br">
+          完全独立したプライベート環境の構築も可能です。（別途ご相談）'
         }}
-
       </div>
-
-      <!-- モーダル背景 -->
-      <div class="c-modal__mask js-modal-mask hidden"></div>
-
-      <!-- モーダル本体（この中は直接書く or パーツ分割可） -->
-      <section id="solution-modal" class="c-modal hidden" role="dialog" aria-modal="true">
-        <h2 class="c-modal__op-title">契約の仕組み</h2>
-        <ul>
-        <li class="c-modal__text c-media__text--modal">ご購入いただいた伝送量に応じて、ご利用いただける契約期間が設定されます。</li>
-        <li class="c-modal__text c-media__text--modal">
-           契約期間中は、データ保存に対する課金は一切発生いたしません。</li>
-          <li class="c-modal__text c-modal__text--modal"> 購入した伝送量を使い切るまで、または契約期間が満了するまで、保存し続けることが可能です。</li>
-        </ul>
-
-          <!-- タイトル2 -->
-          <h2 class="c-modal__op-title">課金が発生するタイミング</h2>
-
-          <dl class="c-modal__list">
-            <div class="c-modal__item">
-              <dt class="c-modal__term">1.アップロード時（データ保存時）</dt>
-              <dd class="c-modal__desc">
-                <span class="u-text__inline-block">
-                  データをサラストレージに保存する際の伝送量が課金対象となります。
-                </span>
-              </dd>
-            </div>
-
-            <div class="c-modal__item">
-              <dt class="c-modal__term">2.ダウンロード時（データ取り出し時）</dt>
-              <dd class="c-modal__desc">
-                <span class="u-text__inline-block">
-                  保存したデータを取り出す際の伝送量が課金対象となります。
-                </span>
-                <span class="u-text__inline-block">
-                  長期保存に特化した料金体系により、大量のデータを安心して長期間保管いただけます。
-                </span>
-              </dd>
-            </div>
-          </dl>
-               <ul class="c-modal__note">
-                 <li>※伝送量と契約期間の詳細については、各プランをご確認ください。</li>
-                 <li>※契約期間の延長や伝送量の追加購入も可能です。</li>
-                </ul> <!-- 閉じるボタン -->
-                <div class="c-modal__close js-modal-close"> <a class="c-button c-button--close">閉じる</a>
-            </div>
-      </section>
-        </div>
+      {{> c-modal}}
+  </div>
 </section>

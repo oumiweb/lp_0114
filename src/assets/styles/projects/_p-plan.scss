@@ -1,5 +1,21 @@
 @use "../global" as *;
 
 .p-plan {
-  padding-block: calc(120 * var(--to-rem));
+  padding-block: calc(64 * var(--to-rem));
+
+  @include mq("md"){
+    padding-block: calc(120 * var(--to-rem));
+  }
+}
+
+.p-plan__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(280 * var(--to-rem)), 1fr));
+  gap: calc(24 * var(--to-rem));
+  margin-top: calc(24 * var(--to-rem));
+
+  @include mq("md"){
+    gap: calc(52 * var(--to-rem));
+    margin-top: calc(80 * var(--to-rem));
+  }
 }

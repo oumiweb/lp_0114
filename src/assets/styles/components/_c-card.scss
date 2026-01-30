@@ -93,7 +93,7 @@
 .c-card__item {
   position: relative;
   display: block;
-  padding-left: calc(28 * var(--to-rem));
+  padding-left: calc(20 * var(--to-rem));
   line-height: 2;
   text-align: start;
 }
@@ -106,8 +106,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   content: "";
   background-image: url('../images/check-icon.png');
   background-repeat: no-repeat;
@@ -118,8 +118,14 @@
 .c-card__note {
   display: flex;
   justify-content: center;
-  margin-top: calc(32 * var(--to-rem));
-  font-size: calc(15 * var(--to-rem));
+  margin-top: calc(16 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
+  line-height: 2;
+
+  @include mq("md"){
+    margin-top: calc(32 * var(--to-rem));
+    font-size: calc(15 * var(--to-rem));
+  }
 
 
 li {
@@ -139,5 +145,9 @@ li {
 .c-card__button {
   display: flex;
   justify-content: center;
-  margin-top: calc(80 * var(--to-rem));
+  margin-top: calc(24 * var(--to-rem));
+
+  @include mq("md"){
+    margin-top: calc(80 * var(--to-rem));
+  }
 }

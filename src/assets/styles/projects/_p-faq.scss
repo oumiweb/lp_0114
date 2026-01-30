@@ -1,9 +1,17 @@
 @use "../global" as *;
 
 .p-faq {
- padding-block: calc(120 * var(--to-rem));
+ padding-block: calc(64 * var(--to-rem));
+
+ @include mq("md"){
+  padding-block: calc(120 * var(--to-rem));
+ }
 }
 
 .p-faq__accordion {
-  margin-top:calc(80 * var(--to-rem));
+  margin-top:calc(24 * var(--to-rem));
+
+  @include mq("md"){
+    margin-top:calc(80 * var(--to-rem));
+  }
 }

@@ -1,7 +1,11 @@
 @use "../global" as *;
 
 .p-flow {
- padding-block: calc(120 * var(--to-rem));
+ padding-block: calc(64 * var(--to-rem));
+
+ @include mq("md"){
+  padding-block: calc(120 * var(--to-rem));
+ }
 }
 
 .p-flow__box {
@@ -11,10 +15,15 @@
 .p-flow__list {
   display: flex;
   flex-direction: column;
-  gap: calc(48 * var(--to-rem));
-  padding: calc(40 * var(--to-rem));
+  gap: calc(40 * var(--to-rem));
+  padding: calc(32 * var(--to-rem)) calc(16 * var(--to-rem));
   background: #F8F8F8;
   border-radius: 16px;
+
+  @include mq("md"){
+    gap: calc(48 * var(--to-rem));
+    padding: calc(56 * var(--to-rem)) calc(40 * var(--to-rem));
+  }
 }
 
 .p-flow__item {
@@ -23,32 +32,68 @@ flex-direction: row;
  @include mq("md"){
   display: flex;
   gap: calc(40 * var(--to-rem));
-
  }
-
 }
+
+
+//  青ラベル
 
 .p-flow__step {
   display: inline-flex;
+  gap: 4px;
+  align-items: center;
   align-self: flex-start;
   width: fit-content;
-  padding: calc(4 * var(--to-rem))calc(24 * var(--to-rem));
+  padding: calc(5 * var(--to-rem))calc(16 * var(--to-rem));
  font-family: var(--title-font-family);
- font-size:  calc(24 * var(--to-rem));
  line-height: 1.6;
  color: var(--color-white);
  text-wrap: nowrap;
  letter-spacing: 0.08em;
  background: var(--color-button-secondary);
  border-radius: 999px;
+
+ @include mq("md"){
+ padding: calc(5 * var(--to-rem))calc(24 * var(--to-rem));
+ }
+}
+
+.p-flow__step-label {
+  align-items: center;
+  justify-content: center;
+  font-size:  calc(20 * var(--to-rem));
+}
+
+.p-flow__step-number {
+  font-size:  calc(24 * var(--to-rem));
+}
+
+.p-flow__body {
+  margin-top:calc(8 * var(--to-rem));
+
+  @include mq("md"){
+  margin-top: 0;
+  }
 }
 
 .p-flow__heading {
-  font-size:  calc(24 * var(--to-rem));
+  font-size:  calc(20 * var(--to-rem));
  line-height: 1.6;
+
+ @include mq("md"){
+  font-size:  calc(24 * var(--to-rem));
+ }
 }
 
 .p-flow__text {
- padding-top: calc(4 * var(--to-rem));
-}
+  padding-top: calc(4 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
 
+  @include mq("md"){
+    font-size:  calc(15 * var(--to-rem));
+    line-height: 2;
+
+  }
+}

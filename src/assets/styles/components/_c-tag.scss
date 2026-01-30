@@ -2,26 +2,41 @@
 
 .c-tags {
  display: flex;
- gap: 27px;
+ gap: 12px;
  align-items: center;
+
+ @include mq("md"){
+  gap: 27px;
+ }
 }
 
 .c-tag {
- padding-block: calc(4 * var(--to-rem));
- padding-inline: calc(16 * var(--to-rem));
- font-size:  calc(24 * var(--to-rem));
+ padding: calc(4 * var(--to-rem)) calc(8 * var(--to-rem));
+ font-size:  calc(16 * var(--to-rem));
  font-weight: var(--fw-bold);
  line-height: 1.6;
  color: var(--color-secondary);
  background: var(--color-light-blue);
  border-radius: 4px;
 
+ @include mq("md"){
+  padding: calc(4 * var(--to-rem)) calc(16 * var(--to-rem));
+  font-size:  calc(24 * var(--to-rem));
+ }
+
+
+
  &--blue {
-  font-size:  calc(20 * var(--to-rem));
+  padding-inline: calc(8 * var(--to-rem));
+  font-size:  calc(16 * var(--to-rem));
   font-weight: var(--fw-regular);
   color: var(--color-white);
   background: var(--color-blue);
- }
 
+  @include mq("md"){
+    padding-inline: calc(16 * var(--to-rem));
+    font-size:  calc(20 * var(--to-rem));
+  }
+ }
 }
 
