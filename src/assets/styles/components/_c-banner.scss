@@ -5,8 +5,7 @@
   align-items: center;
  justify-content: center;
  padding-block: calc(32 * var(--to-rem));
- background: linear-gradient( to bottom, #3E6186 0%, #3F64AA 100% ),
-url('/assets/images/cta-bg2.png') center / cover no-repeat;
+background: url('/assets/images/cta-bg.png') center / cover no-repeat;
  border-radius: 24px;
 
 

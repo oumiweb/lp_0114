@@ -12,7 +12,7 @@
   height: 100%;
   padding-block: calc(32 * var(--to-rem));
   padding-inline: calc(24 * var(--to-rem));
-  background-color: pink;
+  background-color: var(--color-white);
   border-radius: 16px;
 }
 
@@ -48,7 +48,13 @@
 .c-service-card__item {
     font-size: calc(15 * var(--to-rem));
     line-height: 2;
+
+    &.is-none {
+      display: none;
+    }
 }
+
+
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .c-service-card {

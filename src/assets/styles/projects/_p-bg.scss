@@ -1,16 +1,14 @@
 @use "../global" as *;
 
-.c-bg {
+.p-bg {
   position: relative;
   background-size: cover;
 
   &::before {
     position: absolute;
-    inset:0;
+    inset: 0;
     z-index: -1;
     content: "";
     background-color: var(--color-light-blue); // ←背景色
-
   }
 }
-

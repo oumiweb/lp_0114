@@ -11,9 +11,13 @@ padding-block: calc(64 * var(--to-rem));
 .p-service-card-list {
   display: grid;
   grid-template-columns: 1fr; // 初期は1列（SP）
-  gap: calc(40 * var(--to-rem));
+  gap: calc(24 * var(--to-rem));
   justify-items: center;
   margin-top: calc(24 * var(--to-rem));
+
+  @include mq("md"){
+  gap: calc(40 * var(--to-rem));;
+  }
 
   // 中間幅（768〜959px）：2列構成、3番目のカードは2列分またがる
   @media screen and (min-width: 768px) and (max-width: 959px) {
@@ -42,25 +46,12 @@ padding-block: calc(64 * var(--to-rem));
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:calc(24 * var(--to-rem));
 
   @include mq("md"){
     flex-direction: row;
    justify-content: center;
+   margin-top:calc(48 * var(--to-rem));
   }
 }
 
-// @media screen and (max-width: 960px) {
-//   .p-service-card-list {
-//     grid-template-columns: repeat(2, 1fr); // PCも2列構成
-
-//   > :nth-child(5) {
-//     grid-column: 1 / 3;          // 2列にまたがる
-//     justify-self: center;        // 中央寄せ
-//     width: min(100%, 380px);     // 最大幅制限で見た目を整える
-//   }
-// }
-
-// .p-service-card-list__bottom {
-//   display: contents;
-// }
-// }
