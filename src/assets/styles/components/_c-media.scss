@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .c-media__content:not(:first-of-type) {
- margin-top: calc(64 * var(--to-rem));
+  margin-top: calc(64 * var(--to-rem));
 }
 
 /* Flexboxレイアウト */
@@ -10,39 +10,38 @@
   flex-direction: column;
   align-items: center;
 
-  @include mq("md"){
- flex-direction: row;
-  gap: 40px;
+  @include mq("md") {
+    flex-direction: row;
+    gap: 40px;
   }
 }
 
 /* 画像エリア */
 .c-media__image {
- aspect-ratio: 1/1;
- box-shadow: 2px 2px 24px 0px rgba(0, 0, 0, 0.019);
+  aspect-ratio: 1/1;
+  box-shadow: 2px 2px 24px 0 rgb(0 0 0 / 1.9%);
 
-img {
-  width: 181px;
-  object-fit: cover;
- }
+  img {
+    width: 181px;
+    object-fit: cover;
+  }
 }
 
 .c-media__text {
   align-items: flex-start;
-  margin-top:calc(16 * var(--to-rem));
+  margin-top: calc(16 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     margin-top: 0;
   }
 }
-
 
 .c-media__title {
   font-size: calc(20 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(28 * var(--to-rem));
   }
 }
@@ -71,8 +70,8 @@ img {
   margin-top: calc(8 * var(--to-rem));
   text-align: center;
 
-  @include mq("md"){
-  text-align: start;
+  @include mq("md") {
+    text-align: start;
   }
 }
 
@@ -80,7 +79,7 @@ img {
   margin-top: calc(8 * var(--to-rem));
   font-size: calc(14 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(16 * var(--to-rem));
   }
 }
@@ -91,7 +90,7 @@ img {
   font-weight: var(--fw-regular);
   line-height: 1.8;
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(15 * var(--to-rem));
     line-height: 2;
   }

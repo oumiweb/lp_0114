@@ -17,7 +17,6 @@
   text-align: center;
 }
 
-
 .c-section-title::before {
   display: block;
   font-family: var(--title-font-family);
@@ -28,7 +27,7 @@
   letter-spacing: 0.04em;
   content: attr(data-title);
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(20 * var(--to-rem));
   }
 }
@@ -36,5 +35,3 @@
 .c-section-title[data-position="center"]::before {
   text-align: center;
 }
-
-

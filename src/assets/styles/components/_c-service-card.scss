@@ -1,9 +1,9 @@
 @use "../global" as *;
 
 .c-service-card {
- width: 100%;
+  width: 100%;
 
-  @include mq("md"){
+  @include mq("md") {
     width: clamp(calc(280 * var(--to-rem)), calc(348 * var(--to-rem)), 100%);
   }
 }
@@ -17,10 +17,9 @@
 }
 
 .c-service-card__head {
- display: flex;
- align-items: center;
+  display: flex;
+  align-items: center;
 }
-
 
 .c-service-card__icon {
   width: 33px;
@@ -32,33 +31,29 @@
 }
 
 .c-service-card__title {
- margin-left: 16px;
- font-size: calc(20 * var(--to-rem));
- font-weight: var(--fw-bold);
- line-height: 1.6;
+  margin-left: 16px;
+  font-size: calc(20 * var(--to-rem));
+  font-weight: var(--fw-bold);
+  line-height: 1.6;
 }
 
 .c-service-card__list {
- padding-top: calc(16 * var(--to-rem));
- padding-left: calc(24 * var(--to-rem));
- list-style: disc;
+  padding-top: calc(16 * var(--to-rem));
+  padding-left: calc(24 * var(--to-rem));
+  list-style: disc;
 }
-
 
 .c-service-card__item {
-    font-size: calc(15 * var(--to-rem));
-    line-height: 2;
+  font-size: calc(15 * var(--to-rem));
+  line-height: 2;
 
-    &.is-none {
-      display: none;
-    }
+  &.is-none {
+    display: none;
+  }
 }
 
-
-
-@media screen and (min-width: 768px) and (max-width: 959px) {
+@media screen and (width >= 768px) and (width <= 959px) {
   .c-service-card {
     width: 100%; // ← カラム幅に合わせて広げる
   }
 }
-

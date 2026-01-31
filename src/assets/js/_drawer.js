@@ -264,52 +264,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // === モーダルの処理 ===
 
-// 各モーダルを開くボタン
-const modalOpenButtons = document.querySelectorAll('.js-modal-open');
+  // 各モーダルを開くボタン
+  const modalOpenButtons = document.querySelectorAll(".js-modal-open");
 
-// 閉じるボタン（モーダル内）
-const modalCloseButtons = document.querySelectorAll('.js-modal-close');
+  // 閉じるボタン（モーダル内）
+  const modalCloseButtons = document.querySelectorAll(".js-modal-close");
 
-// ✅ モーダル背景マスク（共通）
-const modalMask = document.querySelector('.js-modal-mask');
+  // ✅ モーダル背景マスク（共通）
+  const modalMask = document.querySelector(".js-modal-mask");
 
-// モーダルを開く
-modalOpenButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const targetId = button.dataset.target;
-    const modal = document.getElementById(targetId);
+  // モーダルを開く
+  modalOpenButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.dataset.target;
+      const modal = document.getElementById(targetId);
 
-    if (modal && modalMask) {
-      fadeIn(modal);        // モーダル本体表示
-      fadeIn(modalMask);    // ✅ 背景マスク表示
+      if (modal && modalMask) {
+        fadeIn(modal); // モーダル本体表示
+        fadeIn(modalMask); // ✅ 背景マスク表示
 
-      modal.setAttribute('aria-hidden', 'false');
-      disableBodyScroll();
-    }
-  });
-});
-
-// モーダルを閉じる共通関数
-function closeModal() {
-  const modals = document.querySelectorAll('.c-modal');
-  modals.forEach(modal => {
-    fadeOut(modal); // モーダル非表示
-    modal.setAttribute('aria-hidden', 'true');
+        modal.setAttribute("aria-hidden", "false");
+        disableBodyScroll();
+      }
+    });
   });
 
-  if (modalMask) fadeOut(modalMask); // ✅ 背景マスク非表示
+  // モーダルを閉じる共通関数
+  function closeModal() {
+    const modals = document.querySelectorAll(".c-modal");
+    modals.forEach(modal => {
+      fadeOut(modal); // モーダル非表示
+      modal.setAttribute("aria-hidden", "true");
+    });
 
-  enableBodyScroll();
-}
+    if (modalMask) fadeOut(modalMask); // ✅ 背景マスク非表示
 
-// 閉じるボタンでモーダルを閉じる
-modalCloseButtons.forEach(button => {
-  button.addEventListener('click', closeModal);
-});
+    enableBodyScroll();
+  }
 
-// 背景マスククリックでモーダルを閉じる
-if (modalMask) {
-  modalMask.addEventListener('click', closeModal);
-}
+  // 閉じるボタンでモーダルを閉じる
+  modalCloseButtons.forEach(button => {
+    button.addEventListener("click", closeModal);
+  });
 
+  // 背景マスククリックでモーダルを閉じる
+  if (modalMask) {
+    modalMask.addEventListener("click", closeModal);
+  }
 });

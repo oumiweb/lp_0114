@@ -7,39 +7,68 @@
   left: 50%;
   z-index: 1000;
   width: 90%;
+}
+
+.c-modal__panel {
   max-width: 999px;
-  padding: calc(32 * var(--to-rem)) calc(48 * var(--to-rem));
+  padding: calc(32 * var(--to-rem)) calc(15 * var(--to-rem));
   background: var(--color-white);
   border-radius: 16px;
   transform: translate(-50%, -50%);
+
+  @include mq("md"){
+    padding: calc(32 * var(--to-rem)) calc(48 * var(--to-rem));
+  }
+}
+
+.c-modal__content {
+  overflow-y: auto;
+  -webit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .c-modal__mask {
   position: fixed;
   inset: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--color-light-blue);
 }
 
 // modal中身
 
 .c-modal__op-title {
   margin-top: calc(8 * var(--to-rem));
-  font-size: calc(28 * var(--to-rem));
+  font-size: calc(17 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
   color: var(--color-blue);
+
+  @include mq("md"){
+    font-size: calc(28 * var(--to-rem));
+  }
+}
+
+.c-modal__op-title:not(:first-child) {
+  margin-top: 24px;
 }
 
 .c-modal__text {
-  font-size: calc(15 * var(--to-rem));
-  font-weight: var(--fw-egular);
-  line-height: 2;
+  font-size: calc(14 * var(--to-rem));
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
   list-style: disc;
 
- &--margin {
-  margin-left: 20px;
- }
+  &--margin {
+    margin-left: 15px;
+    font-size: calc(14 * var(--to-rem));
+    line-height: 1.8;
+
+    @include mq("md"){
+      margin-left: 20px;
+      font-size: calc(15 * var(--to-rem));
+      line-height: 2;
+    }
+  }
 }
 
 .c-modal__note {
@@ -51,11 +80,15 @@
 
 .c-modal__item {
   margin-top: calc(12 * var(--to-rem));
-  font-size: calc(15 * var(--to-rem));
+  font-size: calc(14 * var(--to-rem));
   font-weight: var(--fw-regular);
-  line-height: 2;
-}
+  line-height: 1.8;
 
+  @include mq("md"){
+    font-size: calc(15 * var(--to-rem));
+    line-height: 2;
+  }
+}
 
 .c-modal__term {
   font-size: calc(15 * var(--to-rem));
@@ -65,11 +98,10 @@
 
 .c-modal__close {
   display: flex;
- align-items: center;
- justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-top: calc(22 * var(--to-rem));
 }
-
 
 /* 初期状態では非表示 */
 .hidden {

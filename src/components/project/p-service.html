@@ -1,55 +1,19 @@
 <section id="service" class="p-service p-bg">
   <div class="l-inner l-inner--service">
-    {{> c-section-title
-      title_en="Service"
-      title="「サラストレージ」のサービス内容"
-      position="center"}}
+    {{> c-section-title title_en="Service" title="「サラストレージ」のサービス内容" position="center"}}
 
     <div class="p-service-card-list">
-        {{> c-service-card
-          icon="icon-1"
-          title="データ伝送量に応じた<br>従量課金"
-          item1="保存データの総量ではなく、アップロードとダウンロードの伝送量で従量課金"
-          item2="有効期間中のデータ保存量はかかりません"
-          item3=" プリペードカード型の伝送量と利用期間を選択いただくことで無駄を排除"
-        }}
-
-
-        {{> c-service-card
-          icon="icon-2"
-          title="自動分散保存"
-          item1="データを全国の拠点に自動で分散"
-          item2="自動でバックアップ"
-          item3="故障・災害時も安心"
-        }}
-
-
-        {{> c-service-card
-          icon="icon-3"
-          title="安心のアクセス管理"
-          item1="マイナンバーカードで個別認証"
-          item2="閉域ネットワーク構築支援（オプション）"
-          item3Class="is-none"
-        }}
-      </div>
-         <div class="p-service-card-list p-service-card-list__bottom">
-
-        {{> c-service-card
-          icon="icon-4"
-          title="大容量でも使いやすい<br>専用アプリ"
-          item1="Windows/Macパソコンに対応"
-          item2="ドラッグ&ドロップで簡単操作"
-          item3="普段のファイル操作と同じ感覚で使用可能"
-        }}
-
-        {{> c-service-card
-          icon="icon-5"
-          title="既存システムとの連携<br>（オプション）"
-          item1="お使いのシステムにAPI連携"
-          item2="Microsoft、Google Workspaceとも連携可能"
-          item3="カスタマイズ開発にも対応"
-        }}
-         </div>
+      {{> c-service-card icon="icon-1" title="データ伝送量に応じた<br />従量課金"
+      item1="保存データの総量ではなく、アップロードとダウンロードの伝送量で従量課金" item2="有効期間中のデータ保存量はかかりません" item3="
+      プリペードカード型の伝送量と利用期間を選択いただくことで無駄を排除" }} {{> c-service-card icon="icon-2" title="自動分散保存"
+      item1="データを全国の拠点に自動で分散" item2="自動でバックアップ" item3="故障・災害時も安心" }} {{> c-service-card icon="icon-3"
+      title="安心のアクセス管理" item1="マイナンバーカードで個別認証" item2="閉域ネットワーク構築支援（オプション）" item3Class="is-none" }}
+    </div>
+    <div class="p-service-card-list p-service-card-list__bottom">
+      {{> c-service-card icon="icon-4" title="大容量でも使いやすい<br />専用アプリ" item1="Windows/Macパソコンに対応"
+      item2="ドラッグ&ドロップで簡単操作" item3="普段のファイル操作と同じ感覚で使用可能" }} {{> c-service-card icon="icon-5"
+      title="既存システムとの連携<br />（オプション）" item1="お使いのシステムにAPI連携" item2="Microsoft、Google Workspaceとも連携可能"
+      item3="カスタマイズ開発にも対応" }}
     </div>
   </div>
 </section>

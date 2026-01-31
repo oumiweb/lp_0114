@@ -1,35 +1,34 @@
 @use "../global" as *;
 
-
 .c-problem-item {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
 
   @include mq(md) {
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
 .c-problem-item:not(:first-child) {
-  margin-top:calc(56 * var(--to-rem));
+  margin-top: calc(56 * var(--to-rem));
 
-  @include mq("md"){
-  margin-top:calc(88 * var(--to-rem));
+  @include mq("md") {
+    margin-top: calc(88 * var(--to-rem));
   }
 }
 
 .c-problem-item:last-child {
-  margin-top:calc(56 * var(--to-rem));;
+  margin-top: calc(56 * var(--to-rem));
 
- @include mq("md"){
-  margin-top:calc(104 * var(--to-rem));
- }
+  @include mq("md") {
+    margin-top: calc(104 * var(--to-rem));
+  }
 }
 
-@include mq("md"){
+@include mq("md") {
   .c-problem-item[data-reverse="true"] {
     flex-direction: row-reverse;
     gap: calc(64 * var(--to-rem));
@@ -37,7 +36,7 @@
 }
 
 .c-problem-item[data-reverse="true"] {
- .c-problem-item__body {
+  .c-problem-item__body {
     width: 100%;
   }
 
@@ -47,7 +46,6 @@
     }
   }
 }
-
 
 .c-problem-item__head {
   display: flex;
@@ -70,10 +68,9 @@
 .c-problem-item__number {
   font-family: var(--title-font-family);
   font-size: calc(76 * var(--to-rem));
-  font-weight: var( --fw-medium);
+  font-weight: var(--fw-medium);
   line-height: 1;
   color: var(--color-text);
-
 }
 
 .c-problem-item__title {
@@ -82,7 +79,7 @@
   line-height: 1.6;
   color: var(--color-blue);
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(28 * var(--to-rem));
   }
 }
@@ -93,41 +90,40 @@
   font-weight: var(--fw-bold);
   line-height: 1.6;
 
-  @include mq("md"){
+  @include mq("md") {
     margin-top: calc(40 * var(--to-rem));
   }
 }
 
 .c-problem-item__text {
   margin-top: 8px;
- font-size: calc(15 * var(--to-rem));
- line-height: 1.6;
+  font-size: calc(15 * var(--to-rem));
+  line-height: 1.6;
 
- @include mq("md"){
-  margin-top: 16px;
-  font-size:  calc(18 * var(--to-rem));
- }
+  @include mq("md") {
+    margin-top: 16px;
+    font-size: calc(18 * var(--to-rem));
+  }
 }
 
 .c-problem-item__texts {
   margin-top: calc(32 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     margin-top: calc(40 * var(--to-rem));
   }
 }
 
-
 .c-problem-item__dt {
   display: inline-block;
-  padding: calc(4 * var(--to-rem))calc(8 * var(--to-rem));
+  padding: calc(4 * var(--to-rem)) calc(8 * var(--to-rem));
   font-size: calc(17 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.6;
   background-color: var(--color-bg-gray);
   border-radius: 4px;
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(20 * var(--to-rem));
   }
 }
@@ -141,28 +137,28 @@
   font-weight: var(--fw-regular);
   line-height: 1.7;
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(16 * var(--to-rem));
     line-height: 2;
   }
 }
 
 .c-problem-item__image {
- width: 214px;
+  width: 214px;
 
- @include mq("md"){
-  width: 440px;
- }
+  @include mq("md") {
+    width: 440px;
+  }
 }
 
 .c-problem__wrap {
   background: var(--color-light-blue);
   border-radius: 8px;
 
- @include mq("md"){
-  background: none;
-  border-radius: none;
- }
+  @include mq("md") {
+    background: none;
+    border-radius: none;
+  }
 }
 
 .c-problem-list {
@@ -170,16 +166,15 @@
   padding-top: calc(16 * var(--to-rem));
   margin-top: calc(16 * var(--to-rem));
 
-
   li {
-    margin-top:calc(8 * var(--to-rem));
+    margin-top: calc(8 * var(--to-rem));
     margin-left: 16px;
-    font-size:  calc(14 * var(--to-rem));
+    font-size: calc(14 * var(--to-rem));
     line-height: 1.7;
     list-style: disc;
 
-    @include mq("md"){
-      font-size:  calc(16 * var(--to-rem));
+    @include mq("md") {
+      font-size: calc(16 * var(--to-rem));
       line-height: 2;
     }
   }
@@ -193,7 +188,7 @@
   font-size: calc(13 * var(--to-rem));
   line-height: 1.6;
 
-  @include mq("md"){
+  @include mq("md") {
     padding-bottom: 0;
   }
 }

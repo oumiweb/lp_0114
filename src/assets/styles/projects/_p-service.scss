@@ -1,11 +1,11 @@
 @use "../global" as *;
 
 .p-service {
-padding-block: calc(64 * var(--to-rem));
+  padding-block: calc(64 * var(--to-rem));
 
-@include mq("md"){
-  padding-block: calc(120 * var(--to-rem));
-}
+  @include mq("md") {
+    padding-block: calc(120 * var(--to-rem));
+  }
 }
 
 .p-service-card-list {
@@ -15,12 +15,12 @@ padding-block: calc(64 * var(--to-rem));
   justify-items: center;
   margin-top: calc(24 * var(--to-rem));
 
-  @include mq("md"){
-  gap: calc(40 * var(--to-rem));;
+  @include mq("md") {
+    gap: calc(40 * var(--to-rem));
   }
 
   // 中間幅（768〜959px）：2列構成、3番目のカードは2列分またがる
-  @media screen and (min-width: 768px) and (max-width: 959px) {
+  @media screen and (width >= 768px) and (width <= 959px) {
     grid-template-columns: repeat(2, 1fr);
     justify-items: stretch;
 
@@ -31,7 +31,7 @@ padding-block: calc(64 * var(--to-rem));
   }
 
   // PC（960px〜）：3列構成
-  @media screen and (min-width: 960px) {
+  @media screen and (width >= 960px) {
     grid-template-columns: repeat(3, 1fr);
 
     > :nth-child(3) {
@@ -41,17 +41,15 @@ padding-block: calc(64 * var(--to-rem));
   }
 }
 
-
 .p-service-card-list__bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top:calc(24 * var(--to-rem));
+  margin-top: calc(24 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     flex-direction: row;
-   justify-content: center;
-   margin-top:calc(48 * var(--to-rem));
+    justify-content: center;
+    margin-top: calc(48 * var(--to-rem));
   }
 }
-

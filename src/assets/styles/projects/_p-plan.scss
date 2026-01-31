@@ -3,7 +3,7 @@
 .p-plan {
   padding-block: calc(64 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     padding-block: calc(120 * var(--to-rem));
   }
 }
@@ -14,7 +14,7 @@
   gap: calc(24 * var(--to-rem));
   margin-top: calc(24 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     gap: calc(52 * var(--to-rem));
     margin-top: calc(80 * var(--to-rem));
   }

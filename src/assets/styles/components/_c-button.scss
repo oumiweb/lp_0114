@@ -24,8 +24,7 @@
   line-height: 1.6;
   color: var(--color-white);
 
-
-  @include mq("md"){
+  @include mq("md") {
     padding: calc(16 * var(--to-rem)) calc(56 * var(--to-rem)) calc(16 * var(--to-rem)) calc(32 * var(--to-rem));
     font-size: calc(22 * var(--to-rem));
   }
@@ -40,7 +39,7 @@
     border-left: 11px solid var(--color-white);
     transform: translateY(-50%);
 
-    @include mq("md"){
+    @include mq("md") {
       right: calc(29 * var(--to-rem));
     }
   }
@@ -50,7 +49,7 @@
   font-size: 15px;
   background: var(--color-button-secondary);
   border-radius: 999px;
-  box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.02);
+  box-shadow: 2px 2px 24px rgb(0 0 0 / 2%);
 }
 
 .c-button--close {

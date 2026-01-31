@@ -12,26 +12,25 @@
     display: block;
     width: 100%;
     height: 31px;
-    clip-path: polygon( 0 0, 100% 0, 50% 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
     content: "";
     background-color: var(--color-white);
 
-    @include mq("md"){
+    @include mq("md") {
       bottom: -119px;
       height: 119px;
     }
   }
 
-  @include mq("md"){
+  @include mq("md") {
     padding-block: calc(120 * var(--to-rem));
-
   }
 }
 
 .p-problem__list {
   margin-top: calc(24 * var(--to-rem));
 
-  @include mq("md"){
-  margin-top: calc(80 * var(--to-rem));
+  @include mq("md") {
+    margin-top: calc(80 * var(--to-rem));
   }
 }

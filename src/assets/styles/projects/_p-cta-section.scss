@@ -3,7 +3,7 @@
 .p-cta-section {
   padding-block: calc(64 * var(--to-rem));
 
-  @include mq("md"){
+  @include mq("md") {
     padding-block: calc(80 * var(--to-rem));
   }
 }

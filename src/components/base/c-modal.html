@@ -1,45 +1,43 @@
- <!-- モーダル背景 -->
- <div class="c-modal__mask js-modal-mask hidden"></div>
+<!-- モーダル背景 -->
+<div class="c-modal__mask js-modal-mask hidden"></div>
 
- <!-- モーダル本体（この中は直接書く or パーツ分割可） -->
- <section id="solution-modal" class="c-modal hidden" role="dialog" aria-modal="true">
-   <h2 class="c-modal__op-title">契約の仕組み</h2>
-   <ul>
-   <li class="c-modal__text c-modal__text--margin">ご購入いただいた伝送量に応じて、ご利用いただける契約期間が設定されます。</li>
-   <li class="c-modal__text c-modal__text--margin">
-      契約期間中は、データ保存に対する課金は一切発生いたしません。</li>
-     <li class="c-modal__text c-modal__text--margin"> 購入した伝送量を使い切るまで、または契約期間が満了するまで、保存し続けることが可能です。</li>
-   </ul>
+<!-- モーダル本体（この中は直接書く or パーツ分割可） -->
+<section id="solution-modal" class="c-modal hidden" role="dialog" aria-modal="true">
+  <div class="c-modal__panel">
+  <div class="c-modal__content">
+  <h2 class="c-modal__op-title">契約の仕組み</h2>
+  <ul>
+    <li class="c-modal__text c-modal__text--margin">ご購入いただいた伝送量に応じて、ご利用いただける契約期間が設定されます。</li>
+    <li class="c-modal__text c-modal__text--margin">契約期間中は、データ保存に対する課金は一切発生いたしません。</li>
+    <li class="c-modal__text c-modal__text--margin">購入した伝送量を使い切るまで、または契約期間が満了するまで、保存し続けることが可能です。</li>
+  </ul>
 
-     <!-- タイトル2 -->
-     <h2 class="c-modal__op-title">課金が発生するタイミング</h2>
+  <!-- タイトル2 -->
+  <h2 class="c-modal__op-title">課金が発生するタイミング</h2>
 
-     <dl class="c-modal__list">
-       <div class="c-modal__item">
-         <dt class="c-modal__term">1.アップロード時（データ保存時）</dt>
-         <dd class="c-modal__desc">
-           <span class="u-text__inline-block">
-             データをサラストレージに保存する際の伝送量が課金対象となります。
-           </span>
-         </dd>
-       </div>
+  <dl class="c-modal__list">
+    <div class="c-modal__item">
+      <dt class="c-modal__term">1.アップロード時（データ保存時）</dt>
+      <dd class="c-modal__desc">
+        <span class="u-text__inline-block"> データをサラストレージに保存する際の伝送量が課金対象となります。 </span>
+      </dd>
+    </div>
 
-       <div class="c-modal__item">
-         <dt class="c-modal__term">2.ダウンロード時（データ取り出し時）</dt>
-         <dd class="c-modal__desc">
-           <span class="u-text__inline-block">
-             保存したデータを取り出す際の伝送量が課金対象となります。
-           </span>
-           <span class="u-text__inline-block">
-             長期保存に特化した料金体系により、大量のデータを安心して長期間保管いただけます。
-           </span>
-         </dd>
-       </div>
-     </dl>
-          <ul class="c-modal__note">
-            <li>※伝送量と契約期間の詳細については、各プランをご確認ください。</li>
-            <li>※契約期間の延長や伝送量の追加購入も可能です。</li>
-           </ul> <!-- 閉じるボタン -->
-           <div class="c-modal__close js-modal-close"> <a class="c-button c-button--close">閉じる</a>
-       </div>
- </section>
+    <div class="c-modal__item">
+      <dt class="c-modal__term">2.ダウンロード時（データ取り出し時）</dt>
+      <dd class="c-modal__desc">
+        <span class="u-text__inline-block"> 保存したデータを取り出す際の伝送量が課金対象となります。 </span>
+        <span class="u-text__inline-block"> 長期保存に特化した料金体系により、大量のデータを安心して長期間保管いただけます。 </span>
+      </dd>
+    </div>
+  </dl>
+  <ul class="c-modal__note">
+    <li>※伝送量と契約期間の詳細については、各プランをご確認ください。</li>
+    <li>※契約期間の延長や伝送量の追加購入も可能です。</li>
+  </ul>
+</div>
+
+  <!-- 閉じるボタン -->
+  <div class="c-modal__close js-modal-close"><a class="c-button c-button--close">閉じる</a></div>
+</div>
+</section>

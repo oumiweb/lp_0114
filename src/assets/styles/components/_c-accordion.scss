@@ -1,6 +1,5 @@
 @use "../global" as *;
 
-
 .c-accordion {
   // 背景色やらテキストの色やらを変数で管理
   --_text-color: var(--color-text);
@@ -23,7 +22,7 @@
   &:not(:last-child) {
     margin-bottom: 32px;
 
-    @include mq("md"){
+    @include mq("md") {
       margin-bottom: 40px;
     }
   }
@@ -52,10 +51,10 @@
     background-color var(--_duration) ease,
     color var(--_duration) ease;
 
-    @include mq("md"){
-      padding-inline: calc(40 * var(--to-rem));
-    font-size:  calc(22 * var(--to-rem));
-    }
+  @include mq("md") {
+    padding-inline: calc(40 * var(--to-rem));
+    font-size: calc(22 * var(--to-rem));
+  }
 }
 
 .c-accordion__arrow {
@@ -86,8 +85,6 @@
   transform: rotate(-47.3deg);
 }
 
-
-
 .c-accordion[open] .c-accordion__arrow::before {
   transition: transform 0.3s ease;
 }
@@ -98,14 +95,14 @@
 
 .c-accordion__label {
   grid-column: 1;
-  font-family: var( --title-font-family);
+  font-family: var(--title-font-family);
   font-size: calc(24 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 1.4em;
   color: var(--color-white);
   text-align: start;
 
-  @include mq("md"){
+  @include mq("md") {
     font-size: calc(28 * var(--to-rem));
   }
 }
@@ -113,15 +110,14 @@
 .c-accordion__label--answer {
   color: var(--_background-default);
 
-  @include mq("md"){
+  @include mq("md") {
     text-align: center;
   }
 }
 
-
 .c-accordion[open] .c-accordion__summary {
   color: var(--_text-color-opened);
-  background-color: var( --color-button-secondary);
+  background-color: var(--color-button-secondary);
   border-radius: 12px 12px 0 0;
 }
 
@@ -129,22 +125,21 @@
   transform: rotate(180deg);
 }
 
-
 .c-accordion__contents {
   display: grid;
   grid-template-columns: 1fr;
   gap: calc(8 * var(--to-rem));
   align-items: baseline;
-  padding: calc(16 * var(--to-rem))calc(15 * var(--to-rem));
+  padding: calc(16 * var(--to-rem)) calc(15 * var(--to-rem));
   font-size: calc(14 * var(--to-rem));
   line-height: 1.8;
   background: var(--color-white);
   border-radius: 0 0 12px 12px;
 
-  @include mq("md"){
+  @include mq("md") {
     grid-template-columns: auto 1fr;
     gap: calc(16 * var(--to-rem));
-    padding: calc(12 * var(--to-rem))calc(40 * var(--to-rem));
+    padding: calc(12 * var(--to-rem)) calc(40 * var(--to-rem));
     font-size: calc(15 * var(--to-rem));
     line-height: 2;
   }
@@ -156,7 +151,7 @@
   ol {
     margin-top: calc(16 * var(--to-rem));
 
-    @include mq("md"){
+    @include mq("md") {
       margin-top: calc(32 * var(--to-rem));
     }
   }
@@ -172,41 +167,42 @@
 
 .c-accordion__image {
   display: flex;
- justify-content: center;
- margin-top: calc(16 * var(--to-rem));
+  justify-content: center;
+  margin-top: calc(16 * var(--to-rem));
 }
 
- .c-accordion__image img {
- max-width: calc(463 * var(--to-rem));
- }
+.c-accordion__image img {
+  max-width: calc(463 * var(--to-rem));
+}
 
- .c-accordion__list {
+.c-accordion__list {
   margin-left: 15px;
   line-height: 2;
   list-style: decimal;
- }
+}
 
- .c-accordion__list--disc {
+.c-accordion__list--disc {
   list-style: disc;
- }
+}
 
- .c-accordion__list{
- li::marker {
-  font-size:  15px;
+.c-accordion__list {
+  li::marker {
+    font-size: 15px;
   }
 }
 
-
- .c-accordion__step-title {
+.c-accordion__step-title {
   margin-top: calc(16 * var(--to-rem));
   font-weight: var(--fw-bold);
   line-height: 2em;
   color: var(--color-blue);
- }
+}
 
- .c-accordion__link {
+.c-accordion__link {
   text-decoration: none;
-  transition: color 0.3s, text-decoration 0.3s;
+  transition:
+    color 0.3s,
+    text-decoration 0.3s;
 
   &:hover {
     opacity: 0.5;

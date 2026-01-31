@@ -1,7 +1,7 @@
 <div class="c-media__content">
   <!-- 左：画像 -->
   <div class="c-media__image">
-    <img src="/assets/images/{{img}}" alt="">
+    <img src="/assets/images/{{img}}" alt="" />
   </div>
 
   <!-- 右：テキスト -->
@@ -9,16 +9,14 @@
     <h2 class="c-media__title">{{{title}}}</h2>
 
     {{#if subTitle}}
-      <p class="c-media__subtitle">{{{subTitle}}}</p>
+    <p class="c-media__subtitle">{{{subTitle}}}</p>
     {{/if}}
     <p class="c-media__desc">{{{desc}}}</p>
 
     {{#if btnLabel}}
-      <div class="c-media__button">
-        <button class="c-button c-button--blue js-modal-open" data-target="solution-modal">{{btnLabel}}</button>
-      </div>
+    <div class="c-media__button">
+      <button class="c-button c-button--blue js-modal-open" data-target="solution-modal">{{btnLabel}}</button>
+    </div>
     {{/if}}
-
   </div>
 </div>
-
