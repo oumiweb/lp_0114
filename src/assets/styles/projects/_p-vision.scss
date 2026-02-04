@@ -71,7 +71,7 @@
   background-color: var(--color-blue);
   border-radius: 2px;
 
-  @include mq("md") {
+  @media screen and (width >= 459px) {
     height: 32px;
   }
 }

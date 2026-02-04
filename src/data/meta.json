@@ -1,7 +1,7 @@
 {
   "/index.html": {
-    "title": "サラストレージ|Social Knowledge Bank合同会社",
-    "description": "トップページのディスクリプションです。",
+    "title": "サラストレージ｜Social Knowledge Bank合同会社",
+    "description": "サラストレージは、データ保管・情報漏洩対策・不正アクセス防止を実現する法人向けクラウドストレージサービスです。安全なデータ管理環境を提供します。",
     "ogImage": "/images/ogp.jpg"
   },
   "/_components.html": {
@@ -11,12 +11,12 @@
   },
   "/contact/index.html": {
     "title": "お問い合わせ",
-    "description": "お問い合わせページです。",
+    "description": "サラストレージに関するご質問・導入相談はこちらからお問い合わせください。",
     "ogImage": "/images/ogp.jpg"
   },
   "default": {
-    "title": "デフォルトタイトル",
-    "description": "デフォルトのディスクリプション",
-    "ogImage": "/images/ogp_default.jpg"
+    "title": "サラストレージ|Social Knowledge",
+    "description":"データ保管・情報漏洩対策・不正アクセス防止を実現する法人向けクラウドストレージサービス「サラストレージ」。安全なデータ管理環境を提供します。",
+    "ogImage": "/images/ogp.jpg"
   }
 }
