@@ -37,7 +37,9 @@ export default defineConfig(() => ({
   server: {
     port: 5173,
     host: true, // リモートアクセス用
-    hmr: true, // HMRを有効化
+    hmr: {
+      overlay: false, // エラーオーバーレイを無効化
+    },
   },
   css: {
     devSourcemap: true, // 開発時のソースマップを有効化（HMRに必要）
@@ -107,7 +109,12 @@ export default defineConfig(() => ({
 
     // コンポーネントのディレクトリを読み込む
     handlebars({
-      partialDirectory: globSync("src/components/**/", { absolute: true }),
+      partialDirectory: [
+        resolve(__dirname, "src/components/base"),
+        resolve(__dirname, "src/components/common"),
+        resolve(__dirname, "src/components/layout"),
+        resolve(__dirname, "src/components/project"),
+      ],
       helpers: {
         br: contents => {
           return contents ? contents.replace(/\r?\n/g, "<br>") : "";
