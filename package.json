@@ -24,6 +24,7 @@
     "dev": "concurrently \"yarn watch:scss\" \"vite --host\"",
     "watch:scss": "node bin/watch-scss-globs.js",
     "build": "yarn format && rimraf dist && vite build",
+    "build:client": "rimraf dist-client && vite build --config vite.config.client.js",
     "preview": "vite preview",
     "format": "yarn run _lint-fix && yarn run _prettier-fix",
     "_lint": "eslint --ext .js --ignore-path .gitignore . && stylelint \"**/*.{scss,css}\"",
@@ -50,6 +51,7 @@
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-handlebars": "^2.0.0",
     "vite-plugin-image-optimizer": "^1.1.8",
-    "vite-plugin-sass-glob-import": "^5.0.0"
+    "vite-plugin-sass-glob-import": "^5.0.0",
+    "vite-plugin-singlefile": "^2.3.0"
   }
 }
